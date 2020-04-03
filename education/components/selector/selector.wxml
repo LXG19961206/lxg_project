@@ -1,0 +1,8 @@
+<!--components/selector/selector.wxml-->
+
+<view style='overflow-y:auto;height:500rpx;background:#white;'>
+  <view wx:for="{{list}}" wx:key="*this"
+bindtap="gosomewhere"
+style='color:#444;font-size:29rpx;padding:15rpx;;border-bottom:1px solid #eeeeee;text-align:center;hover{color:red;}'
+data-url="/pages/lxg/details/details?subject={{item.value}}">{{item.name}}</view>
+</view>

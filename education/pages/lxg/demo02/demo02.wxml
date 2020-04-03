@@ -1,0 +1,90 @@
+<view id='top'>
+  <text>{{uname}}</text>
+  <image  src="{{header}}">
+  </image>
+</view>
+<view id='top2'>
+  <text>{{number||0}}</text>
+  <text>学习课程</text>
+  <text>{{pub||0}}</text>
+  <text>发布课程</text>
+  <view class='group'>
+    <view class='item' bindtap='gosomewhere'
+    data-url='/pages/lxg/message/message'>
+      <image src='/icon/xiaoxi2x.png'></image>
+      <text>消息</text>
+    </view>
+    <view class='item'
+    bindtap='nofound'>
+      <image src='/icon/tuijian2x.png'></image>
+      <text>推荐</text>
+    </view>
+     <view class='item'
+     bindtap="nofound">
+      <image src='/icon/zhanghu2x.png'></image>
+      <text>账户</text>
+    </view>
+  </view>
+</view>
+
+<view id='list'>
+  <view class='list-item'
+  bindtap='gosomewhere'
+    data-url='/pages/lxg/myint/myint'>
+    <image src='/icon/dingzhi2x.png'></image>
+    <text>我的私人定制</text>
+  </view>
+  <view class='list-item'
+  bindtap='nofound'>
+    <image src='/icon/tixing2x.png'></image>
+    <text>我的智能提醒</text>
+  </view>
+  <view class='blank'></view>
+  <view class='list-item'
+    bindtap='gosomewhere'
+    data-url='/pages/lxg/collect/collect'>
+    <image src='/icon/shoucang2x.png'
+    ></image>
+    <text>收藏课程</text>
+  </view>
+  <view class='list-item'
+    bindtap='gosomewhere'
+    data-url='/pages/lxg/note/note'>
+    <image src='/icon/biji2x.png'></image>
+    <text>我的笔记</text>
+  </view>
+  <view class='list-item'
+  bindtap='gosomewhere'
+    data-url='/pages/lxg/qoa/qoa'>
+    <image src='/icon/dayi2x.png'></image>
+    <text>我的答疑</text>
+  </view>
+  <view class='list-item' bindtap="nofound">
+    <image src='/icon/kaoshi2x.png'></image>
+    <text>考试练习</text>
+  </view>
+  <view class='list-item' bindtap='gosomewhere'
+    data-url='/pages/lxg/rel_cir/rel_cir'>
+    <image src='/icon/tiezi2x.png'></image>
+    <text>我的帖子</text>
+  </view>
+  <view class='blank'></view>
+  <view class='list-item'
+  bindtap='gosomewhere'
+    data-url='/pages/lxg/help/help'>
+    <image src='/icon/bangzhu2x.png'></image>
+    <text>帮助和反馈</text>
+  </view>
+  <view class='list-item'
+  bindtap='gosomewhere'
+    data-url='/pages/lxg/order/order'>
+    <image src='/icon/kechengzhengding2x.png'></image>
+    <text>课程征订</text>
+  </view>
+  <view class='list-item'
+  bindtap='gosomewhere'
+    data-url='/pages/lxg/about/about'>
+    <image src='/icon/ic_launcher.png'></image>
+    <text>关于我们</text>
+  </view>
+</view>

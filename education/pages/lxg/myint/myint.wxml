@@ -1,0 +1,13 @@
+<view id='top'>
+  <text>{{uname}}</text>
+  <image  src="{{header}}">
+  </image>
+</view>
+
+<view class='title'>为您推送的内容都会基于您的喜好量身定制</view>
+<view bindtap='redesign' class='redesign'>对定制结果不满,重新定制?</view>
+
+<view class='group_1'>
+  <text wx:for='{{list}}' wx:key='*this'>{{item}}</text>
+</view>
+<button bindtap='gohome'>返回</button>

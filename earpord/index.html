@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	
+	body{background-color: rgba(9,9,9,0.05);
+	     width: 1000px;
+			 transition:all 0.5s;
+		   font-family: "book antiqua" ;
+			 zoom:98%;
+			 overflow: auto;
+			 }
+	.top_top
+	{
+	width: 1000px;
+	margin-left: 65%;
+	
+	}
+	.top_top a
+	{
+	text-decoration: none;
+	font-size: 14px;
+	margin-left: 50px;
+	color:black;	
+	line-height: 45px;
+	}
+	.list a{text-decoration: none;
+	       display: inline-block;
+					color:black;
+					margin-top: 30px;
+					margin-left: 39px;
+					font-size: 14px;
+					transition:1s all;
+					}
+	.list{position: relative;
+	      top:-554px;
+				left:350px;
+				height:450px;
+				padding-top: 30px;
+				}
+	.list img
+				{width: 30px;
+				height: 30px;
+				margin-top: 10px;
+				margin-left: 15px;}
+	
+	.line {width:30px;height: 2px;
+				background-color: black;
+				position: relative;
+				left:380px;
+				top:-5px;
+				transition:1s all;
+				margin-top: 5px;}
+	.product:hover .line{width:200px;}
+  .line:hover {width:200px;}
+	.product {text-align: center;
+	          transition:all 0.5s;
+						}
+	 
+  .product img{height: 200px;
+	             width: 226px;
+							 transition:all 0.6s;
+							 margin-top: 15px;
+							}
+	.probox img:hover
+						{transform:scale(1.2);}
+	
+	.probox		{
+						
+						color:#333;
+						}
+	
+  .pro_fir {height: 400px;
+	          width: 1100px;
+						margin-bottom: 30px;
+						position: relative;}
+	.pro_fir .probox 
+						{width:300px;
+	          height:400px;
+						background-color: #fff;
+						position: relative;
+						left:380px;
+						float: left;
+						margin-right: 20px;}
+	.pro_sec .probox  
+						{
+						width: 300px;
+	          height: 400px;
+						background-color: #fff;
+						margin-right: 20px;
+						position: relative;
+						left:380px;
+						float: left;}
+  .pro_thi .probox  
+						{
+						width: 300px;
+	          height: 400px;
+						background-color: #fff;
+						margin-right: 20px;
+						position: relative;
+						left:380px;
+						float: left;
+						text-align: center;}
+	.pro_for {
+						position: relative;
+						top:170px;
+					 }
+  .pro_for .probox
+						{
+						width: 300px;
+	          height: 400px;
+						background-color: #fff;
+						margin-right: 20px;
+						position: relative;
+						left:380px;
+						float: left;
+						text-align: center;}
+
+	.pro_fif .probox   
+						{
+						width: 300px;
+	          height: 400px;
+						background-color: #fff;
+						margin-right: 20px;
+						position: relative;
+						top:240px;
+						left:380px;
+						float: left;
+						text-align: center;}
+	.pro_six .probox   
+						{
+						width: 300px;
+	          height: 400px;
+						background-color: #fff;
+						margin-right: 20px;
+						position: relative;
+						top:310px;
+						left:380px;
+						float: left;
+						text-align: center;}
+	
+  .pro_thi {position: relative;
+	          margin-top: 60px;
+						top:110px;
+						}
+	.proname {
+						font-size: 18px;
+						text-align: center;
+						margin-top: 40px;
+						}
+	.proint  {font-size: 14px;
+	          text-align: center;
+						color:#999;
+						margin-top: 20px;}
+	.propri  {font-size: 14px;
+	          color:red;
+						text-align: center;
+						margin-top:20px;}
+
+	.pro_thi:hover .pro_thi .line{width:200px;}
+	footer{background-color: #3f3f3f;
+	       height: 300px;
+				 position: absolute;
+				 left: 50%;
+				 transform:translate(-50%);
+				 margin-top: 150px;
+				 }
+	.foot {
+				background-color: #3f3f3f;
+	       height:300px;
+				 width: 1300px;
+				 margin-left: 230px;
+				 padding:20px;
+				 box-sizing:border-box;
+				}
+	.left a
+				{
+				 display: block;
+	       text-decoration: none;
+				 font-size: 16px;
+				 color:white;
+				 margin-top: 30px;
+				 margin-left: 40px;
+				}
+	.left {margin-top: 0}
+
+	.middle a
+				{
+				 display: block;
+	       text-decoration: none;
+				 font-size: 16px;
+				 color:white;
+				 margin-top: 30px;
+				 margin-left: 40px;
+				}
+	.middle
+				{
+				position: relative;
+				top: -170px;
+				left:350px;
+				}
+	.right1
+				{
+				position: relative;
+				top: -375px;
+				left:570px;
+				}
+	.right1 a
+				{
+				 display: block;
+	       text-decoration: none;
+				 font-size: 16px;
+				 color:white;
+				 margin-top: 30px;
+				 margin-left: 40px;
+				}
+	.right2 a
+				{
+				 display: block;
+	       text-decoration: none;
+				 font-size: 16px;
+				 color:white;
+				 margin-top: 30px;
+				 margin-left: 40px;
+				}
+	
+	.right2
+				{
+				position: relative;
+				top: -575px;
+				left:800px;
+				}
+
+	#spa {width: 600px;
+				font-size: 14px;
+				color:white;
+	      position: relative;
+				top:-70px;
+				left: 440px;
+				}
+	#drawer_1,#drawer_2,#drawer_3,#drawer_4,#drawer_5,#drawer_6,#drawer_7 ,#drawer_8
+	       {width: 1px;
+	        height: 440px;
+					background-color: white;
+					position: relative;
+					position: absolute;
+					top: 0px;
+					left:239px;
+					transition:all 1s;
+					display: none;
+					}
+	.img{position: relative;
+	     width: 1920px;
+			 overflow: hidden;
+			 }
+	
+	.img img {transition:0.25s all;
+	          height: 550px;}
+	#top2{position: absolute;
+	      top: 0;
+				left: 1920px;
+				width: 1920px;
+				height: 550px;}
+	#top3{position: absolute;
+	      top: 0;
+				left: 1920px;
+				width: 1920px;
+				height: 550px;
+				}
+	
+	.img div{float: left;
+	            width: 13px;
+							height: 13px;
+							background-color: #666;
+							display: block;
+							border-radius:50%;
+							position: absolute;
+						}
+	#bot1 {bottom: 40px;
+	      left: 47%;}
+	#bot2 {bottom: 40px;
+	      left: 50%;}
+	#bot3 {bottom: 40px;
+	      left:53%;}
+
+	#ser {
+				 width: 1920px;
+	       position: absolute;
+				 left: 8px;
+				 top: 53px;
+				 background-color: white;
+				 height: 0px;
+				 z-index: 1;
+				 transition:0.5s all;
+				 overflow: hidden;
+			   box-sizing:border-box;
+				 padding-left: 30%;
+			 }
+  #ser ul
+	     {float: left;
+			  margin-right:100px;
+				margin-top: 20px;
+			 }
+	.login{width: 50px;
+				height: 30px;
+				text-align: center;
+				color:#999;
+				position: absolute;
+				top: 10px;
+				right: 5%;
+				font-size: 20px;
+				cursor:pointer;
+				}
+	.reg{width: 50px;
+				height: 30px;
+				text-align: center;
+				color:#999;
+				position: absolute;
+				top: 10px;
+				right: 2%;
+				font-size: 20px;
+				cursor:pointer;
+				}
+	a{text-decoration: none;}
+	#ser ul{margin-left: -5%;}
+	#drawer_1 a,#drawer_2 a,#drawer_3 a,#drawer_4 a,#drawer_5 a,#drawer_6 a,#drawer_7  a,#drawer_8 a
+	{margin-left: 0px;
+	transform:translateY(-10px)}
+	</style>
+</head>
+<body id='body' >
+<div class="top_top	">
+	<a class="login" href='./login.html'>登录</a><a href="./reg.html" class="reg">注册</a>
+	<a href="" style='margin-top: 60px; '   >FIIL斐耳</a>
+	<a  id='earserve' href='#serve' onmouseover='serve()' >耳机服务
+		<div id='ser' onmouseover='serve()' onmouseout='serve2()'>
+			<ul><a href="lxg.sql" onclick='dl()'>下载fiil+</a></ul>
+			<ul><a href="map.html">线下门店</a></ul>
+			<ul><a href="">产品注册</a></ul>
+			<ul><a href="">正品验证</a></ul>	
+		</div>
+	</a>
+	<a href="map.html">体验店</a>
+	<a href="">新闻资讯</a>
+</div>
+<div class="img">
+<img id='top1' src=".\fiil商城_files\1.jpg" alt="" >
+<img id='top2' src=".\fiil商城_files\2.jpg" alt="" >
+<img id='top3' src=".\fiil商城_files\3.jpg" alt="" >
+<div id='bot1'  onclick='bt1()'></div>
+<div id='bot2'  onclick='bt2()'></div>
+<div id='bot3'  onclick='bt3()'></div>
+</div>
+<div class="list" style='height: 520px;width: 240px;background-color: rgba(255, 255, 255, 0.9);margin-bottom: 490px;'>
+	<a href="" id='a1' onmouseover='fn()' >FIIL 真无线耳机系列</a>
+	<a href="" onmouseover='fn1()'>FIIL Runner</a>
+	<a href="" onmouseover='fn2()'>FIIL 随身星系列</a>
+	<a href="" onmouseover='fn3()'>FIIL Carat系列</a>
+	<a href="" onmouseover='fn4()'>FIIL Diva 系列</a><br>
+	<a href="" onmouseover='fn5()'>FIIL 系列</a><br>
+	<a href="" onmouseover='fn6()'>ACIL E1</a><br>
+	<a href="" onmouseover='fn7()'>耳机配件</a>
+	<div id='drawer_1' onmouseout='gn()' onmouseover='fn()' >
+			<p >FiLi真无线耳机系列</p>
+			<hr>
+			<img src="" alt="图片待插入" id='i1'>
+			<a href="" id='i1a' class='la'></a><br>
+			<img src="" alt="图片待插入" id='i2'>
+			<a href="" id='i2a' class='la'></a>
+	</div>
+	<div id='drawer_2' onmouseout='gn1()' onmouseover='fn1()' >
+			<p style='margin-left: 10px;font-size: 15px;'>FIIL Runner</p>
+			<hr>
+			<img src="" alt="图片待插入" id='i3'>
+			<a href="" id='i3a' class='la'></a><br>
+		
+	</div>
+	<div id='drawer_3' onmouseout='gn2()' onmouseover='fn2()' >
+			<p style='margin-left: 10px;font-size: 15px;'>FIIL 随身星系列</p>
+			<hr>
+			<img src="" alt="图片待插入" id='i4'>
+			<a href="" id='i4a' class='la'></a><br>
+			<img src="" alt="图片待插入" id='i5'>
+			<a href="" id='i5a' class='la'></a><br>
+			<img src="" alt="图片待插入" id='i6'>
+			<a href="" id='i6a' class='la'></a><br>
+			<img src="" alt="图片待插入" id='i7'>
+			<a href="" id='i7a' class='la'></a><br>
+			
+	</div>
+  <div id='drawer_4' onmouseout='gn3()' onmouseover='fn3()' >
+			<p style='margin-left: 10px;font-size: 15px;'>FIIL Carat系列</p>
+			<hr>
+		  <img src="" alt="图片待插入" id='i8'>
+			<a href="" id='i8a' class='la'></a><br>
+			<img src="" alt="图片待插入" id='i9'>
+			<a href="" id='i9a' class='la'></a><br>
+			<img src="" alt="图片待插入" id='i10'>
+			<a href="" id='i10a' class='la'></a><br>
+			<img src="" alt="图片待插入" id='i11'>
+			<a href="" id='i11a' class='la'></a><br>
+	</div>
+	<div id='drawer_5' onmouseout='gn4()' onmouseover='fn4()' >
+			<p style='margin-left: 10px;font-size: 15px;'>FIIL Diva 系列</p>
+			<hr>
+			
+			<img src="" alt="图片待插入" id='i12'>
+			<a href="" id='i12a' class='la'></a><br>
+			<img src="" alt="图片待插入" id='i13'>
+			<a href="" id='i13a' class='la'></a><br>
+			<img src="" alt="图片待插入" id='i14'>
+			<a href="" id='i14a' class='la'></a><br>
+			<img src="" alt="图片待插入" id='i15'>
+			<a href="" id='i15a' class='la'></a><br>
+	</div>
+	<div id='drawer_6' onmouseout='gn5()' onmouseover='fn5()' >
+			<p style='margin-left: 10px;font-size: 15px;'>FIIL 系列</p>
+			<hr>
+			<img src="" alt="图片待插入" id='i18'>
+			<a href="" id='i18a' class='la'></a><br>
+			<img src="" alt="图片待插入" id='i19'>
+			<a href="" id='i19a' class='la'></a><br>
+	</div>
+	<div id='drawer_7' onmouseout='gn6()' onmouseover='fn6()' >
+			<p style='margin-left: 10px;font-size: 15px;'>ACIL E1</p>
+			<hr>
+			<img src="" alt="图片待插入" id='i16'>
+			<a href="" id='i16a' class='la'></a><br>
+			<img src="" alt="图片待插入" id='i17'>
+			<a href="" id='i17a' class='la'></a><br>
+			
+	</div>
+	<div id='drawer_8' onmouseout='gn7()' onmouseover='fn7()' >
+			<p style='margin-left: 10px;font-size: 15px;'>耳机配件</p>
+			<hr>
+		
+			<img src="" alt="图片待插入" id='i20'>
+			<a href="" id='i20a' class='la'></a><br>
+			<img src="" alt="图片待插入" id='i21'>
+			<a href="" id='i21a' class='la'></a><br>
+			<img src="" alt="图片待插入" id='i22'>
+			<a href="" id='i22a' class='la'></a><br>
+	</div>
+
+</div>
+<div class="product" style='width: 1300px;height: 3000px;margin-top: -1000px;'>
+	<p style='margin-left: -320px;font-size: 19px;'>FIIL T1 真无线运动耳机</p>
+	<div class="line" ></div>
+  <div class="pro_fir" >
+		<a href='' class='probox'  id='p1'>
+			<img src id='pimg1' alt="">
+			<p class='proname' id='pname1'></p>
+			<p class='proint'  id='pint1'></p>
+			<p class='propri'  id='price1'></p>
+		</a>
+		<a href class='probox' id='p2'>
+			<img src="fiil商城_files/20190116141414_101.png" id='pimg2' alt="">
+			<p class='proname' id='pname2'>数据待传</p>
+			<p class='proint' id='pint2'>数据待传</p>
+			<p class='propri' id='price2'>数据待传</p>
+    </a >
+		<a href class='probox' id='p3'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg3'>
+			<p class='proname' id='pname3'>数据待传</p>
+			<p class='proint'  id='pint3'>数据待传</p>
+			<p class='propri' id='price3'>数据待传</p>
+		</a>
+	</div>
+
+	<div class="pro_sec" style='margin-top:50px'>
+    <p style='margin-left: -380px;font-size: 19px;'>FIIL 随身星系列</p>
+		<div class="line" ></div>
+		<a href class='probox' id='p4'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg4'>
+			<p class='proname' id='pname4'>数据待传</p>
+			<p class='proint' id='pint4'>数据待传</p>
+			<p class='propri' id='price4'>数据待传</p>
+		</a>
+		<a href class='probox' id='p5'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg5'>
+			<p class='proname' id='pname5'>数据待传</p>
+			<p class='proint' id='pint5'>数据待传</p>
+			<p class='propri' id='price5'>数据待传</p>
+    </a>
+		<a href class='probox' id='p6'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg6'>
+			<p class='proname' id='pname6'>数据待传</p>
+			<p class='proint'  id='pint6'>数据待传</p>
+			<p class='propri' id='price6'>数据待传</p>
+		</a>
+		<a href class='probox' id='p7'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg7'>
+			<p class='proname' id='pname7'>数据待传</p>
+			<p class='proint'  id='pint7'>数据待传</p>
+			<p class='propri' id='price7'>数据待传</p>
+		</a>
+		</div>
+	
+	<div class="pro_thi" style='margin-top:50px;'>
+    <p style='font-size: 19px;color:black;margin-left:-380px'>FIIL Carat系列</p>
+		<div class="line"></div>
+		<a href class='probox' id='p8'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg8'>
+			<p class='proname' id='pname8'>数据待传</p>
+			<p class='proint' id='pint8'>数据待传</p>
+			<p class='propri' id='price8'>数据待传</p>
+		</a>
+		<a href class='probox' id='p9'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg9'>
+			<p class='proname' id='pname9'>数据待传</p>
+			<p class='proint'  id='pint9'>数据待传</p>
+			<p class='propri'  id='price9'>数据待传</p>
+    </a>
+		<a href class='probox' id='p10'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg10'>
+			<p class='proname' id='pname10'>数据待传</p>
+			<p class='proint'  id='pint10'>数据待传</p>
+			<p class='propri' id='price10'>数据待传</p>
+		</a>
+		<a href class='probox' id='p11'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg11'>
+			<p class='proname' id='pname11'>数据待传</p>
+			<p class='proint' id='pint11'>数据待传</p>
+			<p class='propri' id='price11'>数据待传</p>
+		</a>
+	 </div>
+
+	 <div class="pro_for" style='margin-top:50px;'>
+    <p style='margin-left: -380px;margin-top: -5px;	font-size: 22px;color:black'>FIIL Diva 系列</p>
+		<div class="line" ></div>
+		<a href class='probox' id='p12'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg12'>
+			<p class='proname' id='pname12'>数据待传</p>
+			<p class='proint'  id='pint12'>数据待传</p>
+			<p class='propri'  id='price12'>数据待传</p>
+		</a>
+		<a href class='probox' id='p13'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg13'>
+			<p class='proname' id='pname13'>数据待传</p>
+			<p class='proint'  id='pint13'>数据待传</p>
+			<p class='propri'  id='price13'>数据待传</p>
+    </a>
+		<a href class='probox' id='p14'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg14'>
+			<p class='proname' id='pname14'>数据待传</p>
+			<p class='proint'  id='pint14'>数据待传</p>
+			<p class='propri'  id='price14'>数据待传</p>
+		</a>
+		<a href class='probox' id='p15'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg15'>
+			<p class='proname' id='pname15'>数据待传</p>
+			<p class='proint' id='pint15'>数据待传</p>
+			<p class='propri' id='price15'>数据待传</p>
+		</a>
+	 </div>
+
+		<div class="pro_fif" style='margin-top: 50px'	>
+    <p style='position: relative;top:240px;left:-220px;	font-size: 22px;color:black'>FIIL 系列</p>
+		<div class="line" style='position: relative;top: 230px;'></div>
+		<a href class='probox' id='p16'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg16'>
+			<p class='proname' id='pname16'>数据待传</p>
+			<p class='proint' id='pint16'>数据待传</p>
+			<p class='propri' id='price16'>数据待传</p>
+		</a>
+		<a href class='probox' id='p17'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg17'>
+			<p class='proname'  id='pname17'>数据待传</p>
+			<p class='proint' id='pint17'>数据待传</p>
+			<p class='propri' id='price17'>数据待传</p>
+    </a>
+		<a href class='probox' id='p18'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg18'>
+			<p class='proname' id='pname18'>数据待传</p>
+			<p class='proint' id='pint18'>数据待传</p>
+			<p class='propri'  id='price18'>数据待传</p>
+		</a>
+		<a href class='probox' id='p19'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg19'>
+			<p class='proname' id='pname19'>数据待传</p>
+			<p class='proint' id='pint19'>数据待传</p>
+			<p class='propri'  id='price19'>数据待传</p>
+		</a>
+	 </div>
+
+  <div class="pro_six">
+    <p style='margin-left: -440px;position: relative;top:306px;	font-size:22px;color:black'>耳机配件</p>
+		<div class="line" style='position: relative;top: 296px;'></div>
+		<a href class='probox' id='p20'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg20'> 
+			<p class='proname' id='pname20'>数据待传</p>
+			<p class='proint'  id='pint20'>数据待传</p>
+			<p class='propri'  id='price20'>数据待传</p>
+		</a>
+		<a href class='probox' id='p21'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg21'>
+			<p class='proname' id='pname21'>数据待传</p>
+			<p class='proint' id='pint21'>数据待传</p>
+			<p class='propri' id='price21'>数据待传</p>
+    </a>
+		<a href class='probox' id='p22'>
+			<img src="fiil商城_files/20190116141414_101.png" alt="" id='pimg22'>
+			<p class='proname' id='pname22'>数据待传</p>
+			<p class='proint'  id='pint22'>数据待传</p>
+			<p class='propri'  id='price22'>数据待传</p>
+		</a>
+	 </div> 
+  </div>	
+<footer>
+	<div class="foot" style='text-align: center;'>
+		<div class="left"  style='width:200px;margin-left: 100px;'>
+				<a href style='font-weight:700;font-size:17px'>服务支持</a>
+				<a href='./after_sold.html' style='font-size:14px	'>售后政策</a>
+				<a href='./helper of  use.html'>操作说明</a>
+		</div>
+
+		<div class="middle"  style='width:200px;margin-left: 600x;'>
+				<a href style='font-weight:700;font-size:17px'>帮助中心</a>
+				<a href='paymethod.html' style='font-size:14px	'>支付方式</a>
+				<a href='postmethod.html'>配送方式</a>
+				<a href='q&a.html'>常见问题</a>
+		</div>
+
+    <div class="right1"  style='width:200px;margin-left: 600x;'>
+				<a href style='font-weight:700;font-size:17px'>关于我们</a>
+				<a href='priv.html' style='font-size:14px	'>隐私条款</a>
+				<a href>法律声明</a>
+				<a href>图片视频</a>
+		</div>
+	  
+		<div class="right2"  style='width:200px;margin-left: 600x;'>
+				<a href style='font-weight:700;font-size:17px'>关注我们</a>
+				<a href style='font-size:14px	'>加入我们</a>
+				<a href>联系我们</a>
+		</div>
+	</div>
+	  <div id='spa'><span>Copyright © 2015-2018, Fengfan (Beijing) Technology Co., Ltd. All Rights Reserved.
+
+		峰范（北京）科技有限公司 | 京ICP备15026427号</span></div>
+    <span style='float: right;position: absoulte;top:210px;right:100px;color:white'>400-850-7997</span>	
+</footer>
+<script>
+	function fn()
+	{
+	document.getElementById('drawer_1').style='width:300px;display: block;';
+  }
+	function gn()
+	{
+	document.getElementById('drawer_1').style='width:0px;display: none;';
+  }
+	function fn1()
+	{
+	document.getElementById('drawer_2').style='width:300px;display: block;';
+  }
+	function gn1()
+	{
+	document.getElementById('drawer_2').style='width:0px;display: none;';
+  }
+  function fn2()
+	{
+	document.getElementById('drawer_3').style='width:300px;display: block;';
+  }
+	function gn2()
+	{
+	document.getElementById('drawer_3').style='width:0px;display: none;';
+  }
+	 function fn3()
+	{
+	document.getElementById('drawer_4').style='width:300px;display: block;';
+  }
+	function gn3()
+	{
+	document.getElementById('drawer_4').style='width:0px;display: none;';
+  }
+	 function fn4()
+	{
+	document.getElementById('drawer_5').style='width:300px;display: block;;';
+  }
+	function gn4()
+	{
+	document.getElementById('drawer_5').style='width:0px;display: none;';
+  }
+	 function fn5()
+	{
+	document.getElementById('drawer_6').style='width:300px;display: block;';
+  }
+	function gn5()
+	{
+	document.getElementById('drawer_6').style='width:0px;display: none;';
+  }
+	 function fn6()
+	{
+	document.getElementById('drawer_7').style='width:300px;display: block;';
+  }
+	function gn6()
+	{
+	document.getElementById('drawer_7').style='width:0px;display: none;';
+  }
+   function fn7()
+	{
+	document.getElementById('drawer_8').style='width:300px;display: block;';
+  }
+	function gn7()
+	{
+	document.getElementById('drawer_8').style='width:0px;display: none;';
+  }
+  
+	
+
+
+	
+	function bt1()
+	{
+	top1.style='left:0;top:0;';
+	top2.style='right:0;top:0;';
+	top3.style='right:0;top:0;';
+	bot1.style='background-Color: white;'
+	bot2.style='background-Color: #666;'
+	bot3.style='background-Color: #666;'
+	}
+	function bt2()
+	{
+	top1.style='right:0;top:0;';
+	top2.style='left:0;top:0;';
+	top3.style='right:0;top:0;';
+	bot2.style='background-color:white'; 
+	bot1.style='background-Color: #666';
+	bot3.style='background-Color: #666';
+	}
+
+	function bt3()
+	{
+	top1.style='right:0;top:0;';
+	top2.style='right:0;top:0;';
+	top3.style='left:0;top:0;';
+	bot3.style='background-Color: white;'
+	bot1.style='background-Color: #666;'
+	bot2.style='background-Color: #666;'
+
+	}
+
+	function dl()
+	{
+	alert('即将开始下载');
+	}
+	function serve()
+	{
+	ser.style='height:90px';
+	}
+  function serve2()
+	{
+	ser.style='height:0px';
+	}
+
+	onload=function()
+	{
+  setTimeout(function()
+	{bot1.style='background-color:white';},0)
+	setInterval(function()
+	{top2.style='left:0';bot3.style='background-color:#666'; bot1.style='background-color:#666';bot2.style='background-color:white';  },3000)
+	setInterval(function(){top1.style='left:1920px'},6000)
+	setInterval(function(){top2.style='left:1920px'},6000)
+  setInterval(function()
+	{top3.style='left:0';bot2.style='background-color:#666';bot3.style='background-color:white';  bot1.style='background-color:#666'; },6000)
+	setInterval(function()
+	{top1.style='left:0';bot1.style='background-color:white';bot2.style='background-color:#666';  bot3.style='background-color:#666'; },9000)
+	setInterval(function(){top3.style='left:1920px'},9000)
+  var xhr=new XMLHttpRequest;
+	xhr.onreadystatechange=function()
+		{
+			if(xhr.readyState==4&&xhr.status==200)
+				{ 
+					let result=xhr.responseText;
+					let arr=JSON.parse(result);
+//					console.log(arr);
+					pname1.innerHTML=`${arr[0].pname}`;
+				  document.getElementById('pimg1').src=`${arr[0].pimg}`;
+				  price1.innerHTML=`${arr[0].price}元`;
+				  pint1.innerHTML=`${arr[0].pdetail}`;
+
+					pname2.innerHTML=`${arr[1].pname}`;
+				  document.getElementById('pimg2').src=`${arr[1].pimg}`;
+				  price2.innerHTML=`${arr[1].price}元`;
+				  pint2.innerHTML=`${arr[1].pdetail}`;
+
+					
+					pname3.innerHTML=`${arr[2].pname}`;
+				  document.getElementById('pimg3').src=`${arr[2].pimg}`;
+				  price3.innerHTML=`${arr[2].price}元`;
+				  pint3.innerHTML=`${arr[2].pdetail}`;
+
+					pname4.innerHTML=`${arr[3].pname}`;
+				  document.getElementById('pimg4').src=`${arr[3].pimg}`;
+				  price4.innerHTML=`${arr[3].price}元`;
+				  pint4.innerHTML=`${arr[3].pdetail}`;
+
+					pname5.innerHTML=`${arr[4].pname}`;
+				  document.getElementById('pimg5').src=`${arr[4].pimg}`;
+				  price5.innerHTML=`${arr[4].price}元`;
+				  pint5.innerHTML=`${arr[4].pdetail}`;
+
+					pname6.innerHTML=`${arr[5].pname}`;
+				  document.getElementById('pimg6').src=`${arr[5].pimg}`;
+				  price6.innerHTML=`${arr[5].price}元`;
+				  pint6.innerHTML=`${arr[5].pdetail}`;
+
+					pname7.innerHTML=`${arr[6].pname}`;
+				  document.getElementById('pimg7').src=`${arr[6].pimg}`;
+				  price7.innerHTML=`${arr[6].price}元`;
+				  pint7.innerHTML=`${arr[6].pdetail}`;
+
+					pname8.innerHTML=`${arr[7].pname}`;
+				  document.getElementById('pimg8').src=`${arr[7].pimg}`;
+				  price8.innerHTML=`${arr[7].price}元`;
+				  pint8.innerHTML=`${arr[7].pdetail}`;
+          
+					pname9.innerHTML=`${arr[8].pname}`;
+				  document.getElementById('pimg9').src=`${arr[8].pimg}`;
+				  price9.innerHTML=`${arr[8].price}元`;
+				  pint9.innerHTML=`${arr[8].pdetail}`;
+
+          pname10.innerHTML=`${arr[9].pname}`;
+				  document.getElementById('pimg10').src=`${arr[9].pimg}`;
+				  price10.innerHTML=`${arr[9].price}元`;
+				  pint10.innerHTML=`${arr[9].pdetail}`;
+
+					
+          pname11.innerHTML=`${arr[10].pname}`;
+				  document.getElementById('pimg11').src=`${arr[10].pimg}`;
+				  price11.innerHTML=`${arr[10].price}元`;
+				  pint11.innerHTML=`${arr[10].pdetail}`;
+
+					pname12.innerHTML=`${arr[11].pname}`;
+				  document.getElementById('pimg12').src=`${arr[11].pimg}`;
+				  price12.innerHTML=`${arr[11].price}元`;
+				  pint12.innerHTML=`${arr[11].pdetail}`;
+
+					pname13.innerHTML=`${arr[12].pname}`;
+				  document.getElementById('pimg13').src=`${arr[12].pimg}`;
+				  price13.innerHTML=`${arr[12].price}元`;
+				  pint13.innerHTML=`${arr[12].pdetail}`;
+
+					pname14.innerHTML=`${arr[13].pname}`;
+				  document.getElementById('pimg14').src=`${arr[13].pimg}`;
+				  price14.innerHTML=`${arr[13].price}元`;
+				  pint14.innerHTML=`${arr[13].pdetail}`;
+
+					pname15.innerHTML=`${arr[14].pname}`;
+				  document.getElementById('pimg15').src=`${arr[14].pimg}`;
+				  price15.innerHTML=`${arr[14].price}元`;
+				  pint15.innerHTML=`${arr[14].pdetail}`;
+
+					pname16.innerHTML=`${arr[15].pname}`;
+				  document.getElementById('pimg16').src=`${arr[15].pimg}`;
+				  price16.innerHTML=`${arr[15].price}元`;
+				  pint16.innerHTML=`${arr[15].pdetail}`;
+
+					pname17.innerHTML=`${arr[16].pname}`;
+				  document.getElementById('pimg17').src=`${arr[16].pimg}`;
+				  price17.innerHTML=`${arr[16].price}元`;
+				  pint17.innerHTML=`${arr[16].pdetail}`;
+
+					pname18.innerHTML=`${arr[17].pname}`;
+				  document.getElementById('pimg18').src=`${arr[17].pimg}`;
+				  price18.innerHTML=`${arr[17].price}元`;
+				  pint18.innerHTML=`${arr[17].pdetail}`;
+					
+					pname19.innerHTML=`${arr[18].pname}`;
+				  document.getElementById('pimg19').src=`${arr[18].pimg}`;
+				  price19.innerHTML=`${arr[18].price}元`;
+				  pint19.innerHTML=`${arr[18].pdetail}`;
+
+					pname20.innerHTML=`${arr[19].pname}`;
+				  document.getElementById('pimg20').src=`${arr[19].pimg}`;
+				  price20.innerHTML=`${arr[19].price}元`;
+				  pint20.innerHTML=`${arr[19].pdetail}`;
+
+					pname21.innerHTML=`${arr[20].pname}`;
+				  document.getElementById('pimg21').src=`${arr[20].pimg}`;
+				  price21.innerHTML=`${arr[20].price}元`;
+				  pint21.innerHTML=`${arr[20].pdetail}`;
+          
+					pname22.innerHTML=`${arr[21].pname}`;
+				  document.getElementById('pimg22').src=`${arr[21].pimg}`;
+				  price22.innerHTML=`${arr[21].price}元`;
+				  pint22.innerHTML=`${arr[21].pdetail}`;
+
+					i1.src=`${arr[0].pimg}`;
+					i1a.innerHTML=`${arr[0].pname}`;
+
+					i2.src=`${arr[1].pimg}`;
+					i2a.innerHTML=`${arr[1].pname}`;
+
+					i3.src=`${arr[2].pimg}`;
+					i3a.innerHTML=`${arr[2].pname}`;
+
+					i4.src=`${arr[3].pimg}`;
+					i4a.innerHTML=`${arr[3].pname}`;
+
+					i5.src=`${arr[4].pimg}`;
+					i5a.innerHTML=`${arr[4].pname}`;
+
+					i6.src=`${arr[5].pimg}`;
+					i6a.innerHTML=`${arr[5].pname}`;
+
+					i7.src=`${arr[6].pimg}`;
+					i7a.innerHTML=`${arr[6].pname}`;
+					
+					i8.src=`${arr[7].pimg}`;
+					i8a.innerHTML=`${arr[7].pname}`;
+
+					i9.src=`${arr[8].pimg}`;
+					i9a.innerHTML=`${arr[8].pname}`;
+
+					i10.src=`${arr[9].pimg}`;
+					i10a.innerHTML=`${arr[9].pname}`;
+					
+					i11.src=`${arr[10].pimg}`;
+					i11a.innerHTML=`${arr[10].pname}`;
+
+					i12.src=`${arr[11].pimg}`;
+					i12a.innerHTML=`${arr[11].pname}`;
+
+					i13.src=`${arr[12].pimg}`;
+					i13a.innerHTML=`${arr[12].pname}`;
+
+					i14.src=`${arr[13].pimg}`;
+					i14a.innerHTML=`${arr[13].pname}`;
+
+					i15.src=`${arr[14].pimg}`;
+					i15a.innerHTML=`${arr[14].pname}`;
+
+					i16.src=`${arr[15].pimg}`;
+					i16a.innerHTML=`${arr[15].pname}`;
+
+					i17.src=`${arr[14].pimg}`;
+					i17a.innerHTML=`${arr[14].pname}`;
+
+					i18.src=`${arr[17].pimg}`;
+					i18a.innerHTML=`${arr[17].pname}`;
+
+					i19.src=`${arr[18].pimg}`;
+					i19a.innerHTML=`${arr[18].pname}`;
+
+					i20.src=`${arr[19].pimg}`;
+					i20a.innerHTML=`${arr[19].pname}`;
+
+					i21.src=`${arr[20].pimg}`;
+					i21a.innerHTML=`${arr[20].pname}`;
+					
+					i22.src=`${arr[21].pimg}`;
+					i22a.innerHTML=`${arr[21].pname}`;
+					 
+//		      
+//			for(var i=1;i<=22;i++)
+//					{
+//					pi.href=arr[i-1].href
+//					}
+					
+					
+
+//				  p1.href= arr[0].href  
+//				  p2.href= arr[1].href  
+//				  p3.href= arr[2].href  
+//				  p4.href= arr[3].href  
+//				  p5.href= arr[4].href  
+//				  p6.href= arr[5].href  
+//				  p7.href= arr[6].href  
+//				  p8.href= arr[7].href  
+//				  p9.href= arr[8].href  
+//				  p10.href= arr[9].href  
+//				  p11.href= arr[10].href  
+//				  p12.href= arr[11].href  
+//				  p13.href= arr[12].href  
+//				  p14.href= arr[13].href  
+//				  p15.href= arr[14].href  
+//				  p16.href= arr[15].href  
+//				  p17.href= arr[16].href  
+//				  p18.href= arr[17].href  
+//				  p19.href= arr[18].href  
+//				  p20.href= arr[19].href  
+//	    	  p21.href= arr[20].href  
+//				  p22.href= arr[21].href  
+					
+					i1a.href= arr[0].href  
+				  i2a.href= arr[1].href  
+				  i3a.href= arr[2].href  
+				  i4a.href= arr[3].href  
+				  i5a.href= arr[4].href  
+				  i6a.href= arr[5].href  
+				  i7a.href= arr[6].href  
+				  i8a.href= arr[7].href  
+				  i9a.href= arr[8].href  
+				  i10a.href= arr[9].href  
+				  i11a.href= arr[10].href  
+				  i12a.href= arr[11].href  
+				  i13a.href= arr[12].href  
+				  i14a.href= arr[13].href  
+				  i15a.href= arr[14].href  
+				  i16a.href= arr[15].href  
+				  i17a.href= arr[16].href  
+				  i18a.href= arr[17].href  
+				  i19a.href= arr[18].href  
+				  i20a.href= arr[19].href  
+	    	  i21a.href= arr[20].href  
+				  i22a.href= arr[21].href  
+				}
+		}
+		xhr.open('get','/user/index/',true);
+		xhr.send();
+	}
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,26 @@
+<!--pages/lxg/video/video.wxml-->
+<view class='contianer'>
+  <video src='{{video}}'
+  mode='widthFix'
+  autoplay
+  object-fit='fill'></video>
+</view>
+<view wx:for='{{content}}' wx:key='*this' class='container'>
+    <image src='{{header[index]}}'></image>
+    <image bindtap="awardtab" class='award' 
+    src='/icon/{{src[index]}}'   
+    data-index="{{index}}"
+    mode='widthFix'></image>
+    <view>
+      <view>{{user[index]}}</view> 
+      <view>{{time[index]}}</view>
+      <view>{{content[index]}}</view> 
+    </view>
+</view>
+
+<view id='box'>
+  <textarea placeholder='说点什么吧。'
+  value='{{message}}'></textarea>
+  <button size='40'
+  bindtap='send'>提交</button>
+</view>

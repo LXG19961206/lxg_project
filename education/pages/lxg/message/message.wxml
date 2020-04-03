@@ -1,0 +1,23 @@
+
+<view id='msg'>
+  <view class='title'
+  bindtap='details'
+  data-msg='0'>
+    <image src='/icon/bangzhu2x.png' mode='widthFix'></image>
+    <text class='details'>推荐好友下载app送大礼</text>
+    <text class='time'>2019-01-01</text>
+  </view>
+  <view class='title'
+  bindtap='details'
+  data-msg='1'>
+    <image src='/icon/bangzhu2x.png' mode='widthFix'></image>
+    <text class='details'>作者的话</text>
+    <text class='time'>2019-01-01</text>
+  </view>
+</view>
+ <view class='textarea'
+    disabled style='display:{{show}}'>{{message}}</view>
+<image src='/icon/gc_ic_cancel_b_pressed.png'
+mode='widthFix'
+bindtap="gohome"
+class='back'></image>

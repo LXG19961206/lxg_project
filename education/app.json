@@ -1,0 +1,63 @@
+{
+  "pages": [
+
+    "pages/lxg/demo01/demo01",
+    "pages/lxg/demo03/demo03",
+    "pages/lxg/myint/myint",    
+    "pages/lxg/demo04/demo04",
+    "pages/lxg/blank/blank",
+    "pages/lxg/teacher/teacher",
+    "pages/lxg/about/about",
+    "pages/lxg/order/order",
+    "pages/lxg/help/help",
+    "pages/lxg/rel_cir/rel_cir",
+    "pages/lxg/qoa/qoa",
+    "pages/lxg/note/note",
+    "pages/lxg/collect/collect",
+    "pages/lxg/demo02/demo02",
+    "pages/lxg/message/message",
+    "pages/lxg/personal/personal",
+    "pages/lxg/details/details",
+    "pages/lxg/login/login",
+    "pages/lxg/video/video"
+    
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/lxg/demo01/demo01",
+        "text": "首页",
+        "iconPath": "icon/0.png",
+        "selectedIconPath": "icon/1.png"
+      },
+      {
+        "pagePath": "pages/lxg/demo02/demo02",
+        "text": "我的定制",
+        "iconPath": "icon/2.png",
+        "selectedIconPath": "icon/3.png"
+      },
+      {
+        "pagePath": "pages/lxg/demo03/demo03",
+        "text": "我的课程",
+        "iconPath": "icon/4.png",
+        "selectedIconPath": "icon/5.png"
+      },
+      {
+        "pagePath": "pages/lxg/demo04/demo04",
+        "text": "选课",
+        "iconPath": "icon/6.png",
+        "selectedIconPath": "icon/7.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

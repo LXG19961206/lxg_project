@@ -1,0 +1,21 @@
+<view
+style='background-color:rgb(230,89,84);height:12%;color:white;font-size:30rpx;font-weight:800;padding:20rpx;'>课程征订</view>
+<view class='titlebox'>
+  <text>征订标题:</text>
+  <input></input>
+</view>
+<view class='contentbox'>
+  <text>征订内容:</text>
+  <textarea></textarea>
+</view>
+<view style='background:#efefef;height:1px;margin-top:50rpx;'></view>
+<view class='readme'>
+  <view>课程征订说明</view>
+  <view>1.请确定本站没有找到您需要的课程,如果由您需要的课程或者已经有其他人提出次课的征集,我们会及时回复您并不通过您提出的征订请求。</view>
+  <view>2.不可征订与学习课程无关的内容,否则不予处理。</view>
+  <view>3.审核通过的课程征订,会在全部征订中显示,社员们都可以进行追加征订,老师们会补充大家征订的课程,请耐心等待。我们的课程一经上架就会在第一时间通知您，敬请留意。</view>
+</view>
+<image src='/icon/gc_ic_cancel_b_pressed.png'
+mode='widthFix'
+bindtap="gohome"
+class='back'></image>

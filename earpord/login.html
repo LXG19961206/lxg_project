@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	
+	header span{
+							margin-left: 20px;
+	            font-size: 40px;
+			       }
+	a{display: inline-block;}
+	.box{padding: 10px;}
+	.box span{
+	          margin-left: 45px;
+	          font-size: 17px;
+					  color:#999;
+						position: absolute;
+						top: 10px;
+					 }
+
+	.s2
+	{font-size: 13px;
+	margin-top: -10px;
+	margin-left: 22px;}
+	.box
+	{
+	height: 700px;
+	background-color: #777;
+	position: relative;
+	
+	}
+	.fast
+	{
+	background-color: white;
+	width: 300px;
+	height: 350px;
+	position: absolute;
+	right: 100px;
+	bottom: 100px;
+	padding: 20px;
+	
+	}
+	input {border-left:0 solid black;
+				border-bottom:1px solid rgba(0,0,0,0.3);
+				border-right:0 solid black;
+				border-top:0 solid black;
+				height: 45px;
+				width: 100%;
+				}
+	.alert
+				{width: 120px;
+	      height: 40px;
+				background-color: rgba(9,9,9,0.2);
+				color:white;
+				text-align: center;
+				line-height: 40px;
+				position: relative;
+				top: -40px;
+				left: 180px;}
+	.fast_login
+				{
+				width: 80%;
+				height: 40px;
+				background-color: black;
+				text-align: center;
+				line-height: 40px;
+				color:white;
+				font-size: 18px;
+				font-weight: 800;
+				margin-left: 10%;
+				margin-top: -40px;
+				}
+	.sp1
+	{
+	margin-top: 20px;
+	margin-left: 250px;
+	}
+	.sp2
+	{
+	margin-top: 20px;
+	margin-left: 380px;
+	}
+	.i1{margin-top: 100px;}
+	.other{margin-left: 25%;
+	       font-size: 15px;
+				 margin-top: 20px;
+				 }
+	.foot{margin-top: 20px;
+	      margin-left: -40px;
+				color:#aaa;
+				font-size: 13px;
+				height: 40px;
+				width: 113.35%;
+				background-color: #bbb;
+				line-height: 40px;}
+	.foot a
+	{margin-left: 180px;
+	text-decoration:none;
+	line-height: 40px;
+	color:black;
+	font-size: 13px;}
+	.foot span
+	{margin-top: 335px;
+	 margin-left: 45px;
+	 font-size: 15px;
+	 color:white;
+	 line-height: 40px;}
+
+	
+	.login_box{width: 300px;
+	           height: 300px;
+						 position: relative;
+						}
+	.upwdlog{width: 300px;
+	      height: 390px;
+				position: absolute;
+				top: 0;
+				right: 340px;
+				background-color: white;
+				box-sizing:border-box;
+				padding: 10px;
+				display: none;
+				}
+
+	</style>	
+</head>
+<body >
+	
+	<header>
+		<span>F</span>
+		<span>I</span>
+		<span>I</span>
+		<span>I</span><br>
+		<span class='s2'>斐</span>
+		<span class='s2'>耳</span>
+		<span class='s2'>耳</span>
+		<span class='s2'>机</span>
+	</header>
+	<div class="box">
+	  <div class="longin_box" id='log'>
+		<div class="fast">
+			<span style='color:black;' class='sp1'>快捷登录</span>
+		  <span  class='sp2' onmouseover='fn()' style='margin-left: 180px;'>密码登录</span>
+		  <input class='i1' id='i1' type="" placeholder='请输入手机号'>
+		  <input class='i2' id='i2' type="" placeholder='请输入验证码'>
+			<div class="alert" onmouseover='check()' id='checkbox'>获取验证码</div>
+			<button class='fast_login' onclick='login_1()'>登录</button>
+			<div class='other'>其他方式登录
+			   <a href=""><img src="fiil商城_files/wechat.png" alt="" style='margin-left: 10px;'></a>
+				 <a href=""><img src="fiil商城_files/sinablog.png" alt="" style='margin-left: 10px;'></a>
+				 <a href=""><img src="fiil商城_files/sinablog.png" alt="" style='margin-left: 10px;'></a>
+				 <div class='foot'><span>还没有账号?</span> <a href="reg.html">立即注册</a></div>
+			</div>
+			<div class='upwdlog' id='up'> 
+				<span style='color:#bbb;' class='sp1' onmouseover='gn()'>快捷登录</span>
+		    <span  class='sp2' onmouseover='fn()' style='margin-left: 180px;color:black'>密码登录</span>	
+			  <input class='i1' id='i3' type="" placeholder='请输入手机号'>
+				<input class='i2' id='i4' type="password" placeholder='密码'>   
+				<button class='fast_login' style='margin-top: 20px;' onclick='login_2()'>登录</button>
+				<div class='other'>其他方式登录
+			   <a href=""><img src="fiil商城_files/wechat.png" alt="" style='margin-left: 10px;'></a>
+				 <a href=""><img src="fiil商城_files/sinablog.png" alt="" style='margin-left: 10px;'></a>
+				 <a href=""><img src="fiil商城_files/sinablog.png" alt="" style='margin-left: 10px;'></a>
+				 <div class='foot'><span style='line-height: 5px;'>还没有账号?</span> <a href="reg.html">立即注册</a></div>
+			</div>
+			</div>
+		 </div>	
+		</div>
+
+	<script>
+	function fn()
+  {
+	up.style='left:20px;display:block';
+	i1.value='';
+	i2.value='';
+	}
+
+	function gn()
+  {
+	up.style='left:-400px;display:none';
+	i3.value='';
+	i4.value='';
+	}
+	
+   var obj=['1','2','3','4','5','6','7','8','9','0','a','b','c','d','e','f','g','h','i','j','k','l','m'];
+			
+			
+			var che='';
+			for(var i=1;i<=4;i++)
+			{
+			let check=Math.ceil(Math.random()*22);
+			che+=obj[check];
+			}
+
+		function check()
+		{
+			
+			checkbox.innerHTML=che;
+			checkbox.style.backgroundColor='black';
+		}
+
+
+
+
+	function login_1()
+	{
+		if(i2.value!=che)
+		{alert('验证码输入错误');
+		window.open('http://127.0.0.1:8080/login.html/'+i1.value)
+		}
+		
+		let phone=i1.value;
+		let checks=i2.value;
+		;
+		var xhr=new XMLHttpRequest();
+		
+		xhr.onreadystatechange=function()
+			{ 
+			if(xhr.readyState==4&&xhr.status==200)
+				{
+				let result=xhr.responseText;
+				let arr=JSON.parse(result);
+        if(arr.length>0)
+				{alert(`登录成功,您的用户名:${arr[0].uname}您的编号:${arr[0].uid}您的手机:${arr[0].phone}`);
+				window.open('http://127.0.0.1:8080/index-reborn.html')
+				}
+				else
+			  {alert('登录失败,信息有误');}
+				}
+			}
+			xhr.open('get','/user/login/'+phone,true);
+			xhr.send();
+	}
+
+
+  
+	
+		function login_2()
+	{
+		alert('submit')
+		let phone=i3.value;
+		let upwd=i4.value;
+		;
+		var xhr=new XMLHttpRequest();
+		
+		xhr.onreadystatechange=function()
+			{ 
+			if(xhr.readyState==4&&xhr.status==200)
+				{
+				let result=xhr.responseText;
+				let arr=JSON.parse(result);
+				if(arr.length>0)
+				{alert(`登录成功,您的用户名:${arr[0].uname}您的编号:${arr[0].uid}您的手机:${arr[0].phone}`);}
+				else
+			  {alert('登录失败,信息有误');}
+				}
+			}
+			xhr.open('get','/user/upwdlogin/'+phone+'&'+upwd,true);
+			xhr.send();
+	}
+  
+ 
+	</script>
+
+</body>
+</html>

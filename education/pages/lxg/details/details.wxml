@@ -1,0 +1,21 @@
+<!--pages/lxg/details/details.wxml-->
+<view id='title' bindtap="show">——精品课程——</view>
+<view>
+  <selector style='marin-top:30rpx;position:absolute;width:50%;background-color:#FFFFF0;border-radius:0 0 30rpx 30rpx;display:{{show}}'></selector>
+</view>
+<view wx:for='{{list}}' wx:key='*this' class='container'
+bindtap='govideo'
+data-title='{{item.title}}'
+data-src='{{item.video}}'>
+  <image 
+  lazy-load="true"
+  class='img' src='{{item.src}}'></image>
+  <view class='text'>
+  <view class='title'>{{item.title}}</view>
+  <text>{{swap}}</text>
+  <text class='price'>￥{{item.price}} </text>
+  <text class='time'>{{item.time}}课时</text>
+  <text>{{swap}}</text>
+  <view class='teacher'>推荐人:{{item.teacher}}老师</view>
+  </view>
+</view>

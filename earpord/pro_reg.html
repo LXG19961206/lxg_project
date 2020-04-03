@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<style>
+		*{
+		  margin: 0;
+		  padding: 0;
+		 }
+		
+		body div
+		{
+		box-sizing:border-box;
+		}
+		
+		input
+		{
+		outline:none;
+		}
+
+		@media screen and (min-width:1200px)
+		{ 
+		  .top
+		  {
+			  width: 70%;
+			  background-color: #efefef;
+			  position: absolute;
+			  left: 50%;
+			  transform:translate(-50%);
+		  }
+		  
+		  h1
+		  {
+			color:black;
+			font-weight: 300;
+			font-size: 30px;
+			text-align: center;
+		  }
+		 
+		  h1+p
+		  {
+			color:#999;
+			font-size: 13px;
+			text-align: center;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		  }
+		  
+		  .content
+		  {
+			  position: absolute;
+			  font-size: 13px;
+			  left: 50%;
+			  transform:translate(-50%);
+			 
+		  }
+			
+		  
+		  input
+		  {
+			  border:0px;
+		      border-bottom: 1px solid #999;
+			  width: 100%;
+			  margin: auto;
+			  font-size: 14px;
+			  margin-top: 1.5rem;
+			  padding-bottom: 0.5rem;
+				
+		  }
+		  
+		  select
+		  {
+			 border:0px;
+			 border-bottom: 1px solid #999;
+			 width: 100%;
+			 margin: auto;
+			 font-size: 14px;
+			 margin-top: 1.5rem;
+			 padding-bottom: 0.5rem; 
+		  }
+		  
+		  button
+		  {
+			display: block;
+			border:0px;
+			background-color: black;
+			color:white;
+			font-size: 14px;
+			width: 120px;
+			height: 35px;
+			line-height: 2.1875rem;
+			margin-top: 1rem;
+			margin-left: 30%;
+			text-align: center; 
+		  }
+		  
+		  a
+		  {
+			  text-decoration: none;
+			  font-size: 12px;
+			  color:#999;
+		  }
+		  a span
+		  {
+			 color:red;  
+		  }
+		  
+		  
+		}
+		
+		
+		@media screen and (max-width:1199px) and (min-width:992px)
+		{ 
+		  .top
+		  {
+			  width: 80%;
+			  background-color: #efefef;
+			  position: absolute;
+			  left: 50%;
+			  transform:translate(-50%);
+		  }
+		  
+		  h1
+		  {
+			color:black;
+			font-weight: 300;
+			font-size: 30px;
+			text-align: center;
+		  }
+		 
+		  h1+p
+		  {
+			color:#999;
+			font-size: 12px;
+			text-align: center;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		  }
+		  
+		  .content
+		  {
+			  position: absolute;
+			  font-size: 13px;
+			  left: 50%;
+			  transform:translate(-50%);
+			 
+		  }
+			
+		  
+		  input
+		  {
+			  border:0px;
+		      border-bottom: 1px solid #999;
+			  width: 100%;
+			  margin: auto;
+			  font-size: 14px;
+			  margin-top: 1.5rem;
+			  padding-bottom: 0.5rem;
+		  }
+		  
+		  select
+		  {
+			 border:0px;
+			 border-bottom: 1px solid #999;
+			 width: 100%;
+			 margin: auto;
+			 font-size: 14px;
+			 margin-top: 1.5rem;
+			 padding-bottom: 0.5rem; 
+		  }
+		  
+		  button
+		  {
+			display: block;
+			border:0px;
+			background-color: black;
+			color:white;
+			font-size: 14px;
+			width: 120px;
+			height: 35px;
+			line-height: 2.1875rem;
+			margin-top: 1rem;
+			margin-left: 30%;
+			text-align: center; 
+		  }
+		  
+		  a
+		  {
+			  text-decoration: none;
+			  font-size: 12px;
+			  color:#999;
+		  }
+		  a span
+		  {
+			 color:red;  
+		  }
+		  
+		  
+		}
+		
+		@media screen and (max-width:991px) and (min-width:768px)
+		{ 
+		  .top
+		  {
+			  width: 90%;
+			  background-color: #efefef;
+			  position: absolute;
+			  left: 50%;
+			  transform:translate(-50%);
+		  }
+		  
+		  h1
+		  {
+			color:black;
+			font-weight: 300;
+			font-size: 30px;
+			text-align: center;
+		  }
+		 
+		  h1+p
+		  {
+			color:#999;
+			font-size: 10px;
+			text-align: center;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		  }
+		  
+		  .content
+		  {
+			  position: absolute;
+			  font-size: 13px;
+			  left: 50%;
+			  transform:translate(-50%);
+			 
+		  }
+			
+		  
+		  input
+		  {
+			  border:0px;
+		      border-bottom: 1px solid #999;
+			  width: 100%;
+			  margin: auto;
+			  font-size: 14px;
+			  margin-top: 1.5rem;
+			  padding-bottom: 0.5rem;
+		  }
+		  
+		  select
+		  {
+			 border:0px;
+			 border-bottom: 1px solid #999;
+			 width: 100%;
+			 margin: auto;
+			 font-size: 14px;
+			 margin-top: 1.5rem;
+			 padding-bottom: 0.5rem; 
+		  }
+		  
+		  button
+		  {
+			display: block;
+			border:0px;
+			background-color: black;
+			color:white;
+			font-size: 14px;
+			width: 120px;
+			height: 35px;
+			line-height: 2.1875rem;
+			margin-top: 1rem;
+			margin-left: 30%;
+			text-align: center; 
+		  }
+		  
+		  a
+		  {
+			  text-decoration: none;
+			  font-size: 12px;
+			  color:#999;
+		  }
+		  a span
+		  {
+			 color:red;  
+		  }
+		  
+		  
+		}
+		
+		@media screen and  (max-width:767px)
+		{ 
+		  .top
+		  {
+			  width: 100%;
+			  background-color: #efefef;
+			  position: absolute;
+			  left: 50%;
+			  transform:translate(-50%);
+			  padding: 1rem 0 1rem 0;
+			  
+		  }
+		  
+		  h1
+		  {
+			color:black;
+			font-weight: 300;
+			font-size: 22px;
+			text-align: center;
+		  }
+		 
+		  h1+p
+		  {
+			display: none;
+		  }
+		  
+		  .content
+		  {
+			  position: absolute;
+			  font-size: 13px;
+			  left: 50%;
+			  transform:translate(-50%);
+			  margin-top: 1rem;
+		  }
+			
+		  
+		  input
+		  {
+			  border:0px;
+		      border-bottom: 1px solid #999;
+			  width: 100%;
+			  margin: auto;
+			  font-size: 14px;
+			  margin-top: 1.5rem;
+			  padding-bottom: 0.5rem;
+		  }
+		  
+		  select
+		  {
+			 border:0px;
+			 border-bottom: 1px solid #999;
+			 width: 100%;
+			 margin: auto;
+			 font-size: 14px;
+			 margin-top: 1.5rem;
+			 padding-bottom: 0.5rem; 
+		  }
+		  
+		  button
+		  {
+			display: block;
+			border:0px;
+			background-color: black;
+			color:white;
+			font-size: 14px;
+			width: 100%;
+			height: 35px;
+			line-height: 2.1875rem;
+			margin-top: 1rem;
+			margin-left: auto;
+			text-align: center; 
+		  }
+		  
+		  a
+		  {
+			  text-decoration: none;
+			  font-size: 12px;
+			  color:#999;
+		  }
+		  a span
+		  {
+			 color:red;  
+		  }
+		  
+		  
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="top">
+			<h1>产品注册</h1>
+			<p>产品（自购买日15天内）注册享有售后政策服务范围内的一年内免费保修服务（仅限非人为损坏、机器性能故障）、优先维修等优质售后服务</p>
+		
+		<div class="content">
+			<input type="text" placeholder="序列号："><br>
+			<input type="text" placeholder="姓名："><br>
+			<input type="text" placeholder="手机号："><br>
+			<input type="text" placeholder="身份证号："><br>
+			
+			<select name="" id="" value='您的职业' placeholder='请选择职业:'>
+				<option value="" oncanplay="ANGLE_instanced_arrays">您的职业</option>
+				<option value="">销售/客服/市场/公关</option>
+				<option value="">财务/人力资源/行政</option>
+				<option value="">房产/建筑</option>
+				<option value="">金融</option>
+				<option value="">贸易/交通/旅游/物流</option>
+				<option value="">生产/制造</option>
+				<option value="">传销/娱乐</option>
+				<option value="">教育/学生/法律</option>
+				<option value="">政府/公共人员</option>
+				<option value="">其他</option>
+			</select>
+			<br>
+			<button>现在注册</button><br>
+			<a href="after_sold.html">售后服务详情，请阅读<span>《FIIL斐耳耳机售后服务政策》</span></a>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

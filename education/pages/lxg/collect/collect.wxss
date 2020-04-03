@@ -1,0 +1,42 @@
+#top{
+height:300rpx;
+background: linear-gradient(to right, #ddd6f3, #faaca8);
+}
+#top>image{
+  width:200rpx;
+  height:200rpx;
+  border-radius: 50%;
+  border:2px solid white;
+  margin-top:200rpx;  
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+}
+#top>text{
+  color:white;
+  font-weight: 800;
+  position: absolute;
+  top:60rpx;
+  font-size: 40rpx;
+  left: 50%;
+  transform: translate(-50%);
+}
+.tab{
+  height: 150rpx;
+  display: flex;
+  background-color:lightpink;
+  position: relative;
+}
+.tab>view{
+width: 50%;
+border-bottom:1px solid #ddd;
+text-align: center;
+}
+.tab>view>text{
+  font-size: 30rpx;
+  color:white;
+  font-weight: 800;
+  position: relative;
+  top:60rpx; 
+}

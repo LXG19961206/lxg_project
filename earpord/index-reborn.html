@@ -1,0 +1,979 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src='js/jquery.min.js'></script>
+    <script src='js/popper.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+    <title>Document</title>
+    <style>
+		body
+		{
+			background-color: #efefef;
+		}
+        #p1>div,#p3>div,#p4>div,#p5>div,#p6>div
+        {
+            height: 400px}
+        #p2>div
+        {
+            height: 400px;
+		}
+			
+        #c>div>div>img
+        { 
+			width: 100%;  
+		}
+        .carousel-control-prev,.carousel-control-next
+        {
+            width: 4%;
+            height: 20%;
+            top: 40%;
+            background-color: rgba(180, 180, 180, 0.2);
+        }
+        .carousel-control-prev:hover,.carousel-control-next:hover
+        {
+            background-color: rgba(180, 180, 180, 0.7);
+        }
+
+        .carousel-indicators li
+        {
+            width: 0.3rem;
+            height: 1rem;
+            box-shadow: #aaaaaa 0.5px;
+            margin-right: 1rem;
+        }
+
+        .top_menu
+        {
+            position: absolute;
+            top: 0;
+            background-color: rgba(255,255,255,0.8);
+            height: 100%;
+            width: 16%;
+            margin-left: 2rem;
+            text-align: center;
+            display:flex;
+            flex-direction: column;
+            justify-content:space-around;
+        }
+		
+        .top_menu a
+        {
+            color:#333;
+            font-size: 13px;
+        }
+		
+        .top_menu a:hover
+        {
+            text-decoration: none;
+        }
+		
+        h3
+        { 	
+			font-weight:300 !important;
+            font-size: 1.5rem ;
+            margin-top: 2rem;
+        }
+
+        #foot_top a
+        {
+            font-size: 13px;
+            color: #bbbbbb;
+        }
+        #foot_top p
+        {
+            font-size: 14px;
+            color:white;
+        }
+		
+        #foot_b p
+        {
+            font-size: 13px;
+            font-weight: 300;
+        }
+		
+        #top_top a,#lor a
+        {
+            font-size: 13px;
+        }
+		
+        .top_menu a:hover
+        {
+            background-color: rgb(240,220,220);
+            border:0.5rem solid transparent;
+        }
+		
+        a:hover{
+            text-decoration: none;}
+			
+        #serve a
+        {
+			display: block;
+            color:#000;
+            font-size: 0.8rem;
+            margin-left: auto;
+            text-align: center;
+        }
+
+        #serve
+        {
+            position: absolute;
+            top: 0;
+            left: 20%;
+            width: 100%;
+            justify-content: space-around;
+        }
+		
+		
+		#product
+		{
+			width:100%;
+			position: relative;
+		}
+		
+		#product a
+		{
+			text-align: center;
+			color:#333;
+			font-size: 14px;	
+		}
+		
+		#product img
+		{
+			width: 200px;
+			height: 160px;
+			display: block;
+			margin:auto;
+			margin-bottom: 2rem;
+			transition:0.6s all;
+			
+		}
+		#product img:hover
+		{
+			transform:scale(1.1)
+		}
+		
+		#product>div>div
+		{
+			box-shadow: #999  -1px -1px 3px inset;
+			box-sizing: border-box;
+			padding: 5px;
+		}
+
+        .proname
+		{
+			color:#333;
+			font-size: 16px !important;
+			text-align: center;
+		}
+		.proint
+		{
+			color:#aaa;
+			font-size: 14px;
+			text-align: center;
+		}
+		.propri
+		{
+			color:red !important;
+		}
+		.propri::before
+		{
+			content:'¥';
+			color:red;
+		}
+		.drawer
+		{
+			width: 25%;
+			height: 100%;
+			position: absolute;
+			background-color: white;
+			top: 0;
+			left: 18.8%;
+			display: none;
+		}
+		.drawer p 
+		{
+			text-align: center;
+			font-size: 15px;
+			margin-top: 0.5rem;
+			margin-bottom: -0.5rem;
+		}
+		.drawer img
+		{
+		 width:13%;
+		}
+		.drawer a
+		{
+		 color:#333;
+		 font-size: 0.9rem;
+		}
+		.line
+		{
+			background-color: #333;
+			width: 2%;
+			height: 1px;
+			margin-bottom: 0.5rem;
+			transition:all 0.5s;
+		}
+		h3:hover  +.line
+		{
+			width:10%;
+		}
+		#top_top>div:hover
+		{
+			background-color: rgb(240,220,220);
+		}
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <div class="row bg-light p-2 ">
+        <div class="col-lg-10 col-sm-7 d-none d-sm-block no-gutters">
+            <div class="row text-dark text-center" id="top_top">
+            <div class="col-3 col-md-3 col-sm-12 d-inline-block"><a class="text-dark" href="">FIIL斐耳</a> </div>
+            <div class=" col-md-3 d-sm-none d-md-block d-inline-block" style="z-index: 10">
+                <a class="text-dark " href="#serve"  data-toggle="collapse" onmouseover="serve()">耳机服务</a>
+            </div>
+            <div class="col-md-3 d-sm-none d-md-block d-inline-block"><a class="text-dark" href="map.html"> 体验店</a> </div>
+
+						<div class="col-md-3 d-sm-none d-md-block d-inline-block"><a class="text-dark" href="">新闻资讯</a> </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-2 col-sm-5  d-sm-block"  id="lor">
+            <div class="row text-right">
+                <div class=" col-5 col-sm-6 "><a class="text-dark" href="./login.html">登录</a></div>
+                <div class=" col-5 col-sm-6"><a class="text-dark" href="./reg.html">注册</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel no-gutters d-none d-md-block" data-ride="carousel" id="c">
+
+        <div class="carousel-inner">
+            <div class="carousel-item active"><img src="fiil商城_files/1.jpg" alt=""/></div>
+
+            <div class="carousel-item "><img src="fiil商城_files/2.jpg" alt=""/></div>
+
+            <div class="carousel-item"><img src="fiil商城_files/3.jpg" alt=""/></div>
+        </div>
+
+        <a href="#c" class="carousel-control-prev"  data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#c" class="carousel-control-next"  data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+        <ul class="carousel-indicators">
+            <li data-target="#c" data-slide-to="0" class="active"></li>
+            <li data-target="#c" data-slide-to="1"></li>
+            <li data-target="#c" data-slide-to="2"></li>
+        </ul>
+				
+				
+        <div class="top_menu " >
+            <a class="d-block " href="" onmouseover='drawer1()' >FIIL 真无线耳机系列</a>
+            <a class="d-block " href="" onmouseover='drawer2()' >FIIL Runner</a>
+            <a class="d-block"  href="" onmouseover='drawer3()'>FIIL 随身星系列</a>
+            <a class="d-block " href="" onmouseover='drawer4()'>FIIL Carat系列</a>
+            <a class="d-block " href="" onmouseover='drawer5()'> FIIL Diva 系列</a>
+            <a class="d-block " href="" onmouseover='drawer6()'>FIIL 系列</a>
+            <a class="d-block " href="" onmouseover='drawer7()'> ACIL E1</a>
+            <a class="d-block " href="" onmouseover='drawer8()'> 耳机配件</a>
+        </div>
+
+
+        <div class="collapse " id="serve">
+            <div class="bg-light w-75 d-flex justify-content-between py-2 " >
+            <a class="col" href="lxg.sql">下载fiil+</a>
+            <a class="col" href="map.html">线下门店</a>
+            <a class="col" href="pro_reg.html">产品注册</a>
+            <a class="col" href="anti-false.html">正品验证</a>
+            </div>
+        </div>
+		
+		<div id="drawer1" class='drawer align-items-center' onmouseout="drawer1s()" onmouseover='drawer1()' >
+				<p >FiLi真无线耳机系列</p>
+				<hr>
+				<img src="" alt="图片待插入" id='i1'>
+				<a href="" id='i1a' class='la'></a><br><br>
+				<img src="" alt="图片待插入" id='i2'>
+			    <a href="" id='i2a' class='la'></a>	
+		</div>
+		
+		<div id='drawer2' class='drawer align-items-center'  onmouseout="drawer2s()" onmouseover='drawer2()' >
+					<p>FIIL Runner</p>
+					<hr>
+					<img src="" alt="图片待插入" id='i3'>
+					<a href="" id='i3a' class='la'></a><br>
+		</div>
+		
+		<div id='drawer3' class='drawer align-items-center'  onmouseout="drawer3s()" onmouseover='drawer3()' >
+				<p>FIIL 随身星系列</p>
+				<hr>
+				<img src="" alt="图片待插入" id='i4'>
+				<a href="" id='i4a' class='la'></a><br><br>
+				<img src="" alt="图片待插入" id='i5'>
+				<a href="" id='i5a' class='la'></a><br><br>
+				<img src="" alt="图片待插入" id='i6'>
+				<a href="" id='i6a' class='la'></a><br><br>
+				<img src="" alt="图片待插入" id='i7'>
+				<a href="" id='i7a' class='la'></a><br><br>
+		</div>
+		
+		<div id='drawer4' class='drawer align-items-center'  onmouseout="drawer4s()" onmouseover='drawer4()' >
+				<p>FIIL Carat系列</p>
+				<hr>
+				<img src="" alt="图片待插入" id='i8'>
+				<a href="" id='i8a' class='la'></a><br><br>
+				<img src="" alt="图片待插入" id='i9'>
+				<a href="" id='i9a' class='la'></a><br><br>
+				<img src="" alt="图片待插入" id='i10'>
+				<a href="" id='i10a' class='la'></a><br><br>
+				<img src="" alt="图片待插入" id='i11'>
+				<a href="" id='i11a' class='la'></a><br><br>
+		</div>
+		
+		<div id='drawer5' class='drawer align-items-center'  onmouseout="drawer5s()" onmouseover='drawer5()' >
+				<p style='margin-left: 10px;font-size: 15px;'>FIIL Diva 系列</p>
+				<hr>		
+				<img src="" alt="图片待插入" id='i12'>
+				<a href="" id='i12a' class='la'></a><br><br>
+				<img src="" alt="图片待插入" id='i13'>
+				<a href="" id='i13a' class='la'></a><br><br>
+				<img src="" alt="图片待插入" id='i14'>
+				<a href="" id='i14a' class='la'></a><br><br>
+				<img src="" alt="图片待插入" id='i15'>
+				<a href="" id='i15a' class='la'></a><br><br>
+		</div>
+		
+		<div id='drawer6' class='drawer align-items-center'  onmouseout="drawer6s()" onmouseover='drawer6()' >
+				<p style='margin-left: 10px;font-size: 15px;'>FIIL 系列</p>
+				<hr>
+				<img src="" alt="图片待插入" id='i18'>
+				<a href="" id='i18a' class='la'></a><br><br>
+				<img src="" alt="图片待插入" id='i19'>
+				<a href="" id='i19a' class='la'></a><br><br>
+		</div>
+		
+		<div id='drawer7' class='drawer align-items-center'  onmouseout="drawer7s()" onmouseover='drawer7()' >
+				<p style='margin-left: 10px;font-size: 15px;'>ACIL E1</p>
+				<hr>
+				<img src="" alt="图片待插入" id='i16'>
+				<a href="" id='i16a' class='la'></a><br><br>
+				<img src="" alt="图片待插入" id='i17'>
+				<a href="" id='i17a' class='la'></a><br><br>
+		</div>
+		
+		<div id='drawer8' class='drawer align-items-center'  onmouseout="drawer8s()" onmouseover='drawer8()' >
+				<p style='margin-left: 10px;font-size: 15px;'>耳机配件</p>
+				<hr>	
+				<img src="" alt="图片待插入" id='i20'>
+				<a href="" id='i20a' class='la'></a><br><br>
+				<img src="" alt="图片待插入" id='i21'>
+				<a href="" id='i21a' class='la'></a><br><br>
+				<img src="" alt="图片待插入" id='i22'>
+				<a href="" id='i22a' class='la'></a><br><br>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+    </div>
+	
+	
+
+
+ <div id='product'>
+    <h3>真无线运动耳机</h3>
+		    <div class="line"></div>
+			<div class="row no-gutters " id="pr1" >
+			    <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+					<a href='' class='probox align-self-center'  id='p1' >
+						<img src id='pimg1' alt="" class='img-fluid'>
+						<p class='text-center proname' id='pname1'></p>
+						<p class='text-center proint'  id='pint1'></p>
+						<p class='text-center propri'  id='price1'></p>
+					</a>	
+				</div>
+			    <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+					<a href='' class='probox'  id='p2' >
+						<img src id='pimg2' alt="" class='img-fluid'>
+						<p class='proname' id='pname2'></p>
+						<p class='proint'  id='pint2'></p>
+						<p class='propri'  id='price2'></p>
+					</a>
+					
+				</div>
+			   <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+					<a href='' class='probox'  id='p3' >
+						<img src id='pimg3' alt="" class='img-fluid'>
+						<p class='proname' id='pname3'></p>
+						<p class='proint'  id='pint3'></p>
+						<p class='propri'  id='price3'></p>
+					</a>
+				</div>
+				<div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2" style='opacity: 0;'>
+					
+				</div>
+				
+			   
+			</div>
+    <br/>
+
+    <h3>Fiil随身星系列</h3>
+	 <div class="line"></div>
+    <div class="row no-gutters  " id="pr2" >
+        <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+			<a href='' class='probox'  id='p4' >
+				<img src id='pimg4' alt="" class='img-fluid'>
+				<p class='text-center proname' id='pname4'></p>
+				<p class='text-center proint'  id='pint4'></p>
+				<p class='text-center propri'  id='price4'></p>
+			</a>	
+		</div>
+        <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+			<a href='' class='probox'  id='p5' >
+				<img src id='pimg5' alt="" class='img-fluid'>
+				<p class='proname' id='pname5'></p>
+				<p class='proint'  id='pint5'></p>
+				<p class='propri'  id='price5'></p>
+			</a>
+			
+		</div>
+       <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+			<a href='' class='probox'  id='p6' >
+				<img src id='pimg6' alt="" class='img-fluid'>
+				<p class='proname' id='pname6'></p>
+				<p class='proint'  id='pint6'></p>
+				<p class='propri'  id='price6'></p>
+			</a>
+		</div>
+       <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+			<a href='' class='probox'  id='p7' >
+				<img src id='pimg7' alt="" class='img-fluid'>
+				<p class='proname' id='pname7'></p>
+				<p class='proint'  id='pint7'></p>
+				<p class='propri'  id='price7'></p>
+			</a>
+		</div>
+    </div>
+
+    <br/>
+
+    <h3>Fiil Carat系列</h3>
+	 <div class="line"></div>
+    <div class="row no-gutters  " id="pr3" >
+       <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+        	<a href='' class='probox'  id='p8' >
+        		<img src id='pimg8' alt="" class='img-fluid'>
+        		<p class='proname' id='pname8'></p>
+        		<p class='proint'  id='pint8'></p>
+        		<p class='propri'  id='price8'></p>
+        	</a>
+        </div>
+        <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+        	<a href='' class='probox'  id='p9' >
+        		<img src id='pimg9' alt="" class='img-fluid'>
+        		<p class='proname' id='pname9'></p>
+        		<p class='proint'  id='pint9'></p>
+        		<p class='propri'  id='price9'></p>
+        	</a>
+        </div>
+       <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+        	<a href='' class='probox'  id='p10' >
+        		<img src id='pimg10' alt="" class='img-fluid'>
+        		<p class='proname' id='pname10'></p>
+        		<p class='proint'  id='pint10'></p>
+        		<p class='propri'  id='price10'></p>
+        	</a>
+        </div>
+        <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+        	<a href='' class='probox'  id='p11' >
+        		<img src id='pimg11' alt="" class='img-fluid'>
+        		<p class='proname' id='pname11'></p>
+        		<p class='proint'  id='pint11'></p>
+        		<p class='propri'  id='price11'></p>
+        	</a>
+        </div>
+    </div>
+
+    <br/>
+    <h3>Fiil Diva系列</h3>
+	 <div class="line"></div>
+    <div class="row no-gutters  " id="pr4" >
+        <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+        	<a href='' class='probox'  id='p12' >
+        		<img src id='pimg12' alt="" class='img-fluid'>
+        		<p class='proname' id='pname12'></p>
+        		<p class='proint'  id='pint12'></p>
+        		<p class='propri'  id='price12'></p>
+        	</a>
+        </div>
+        <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+        	<a href='' class='probox'  id='p13' >
+        		<img src id='pimg13' alt="" class='img-fluid'>
+        		<p class='proname' id='pname13'></p>
+        		<p class='proint'  id='pint13'></p>
+        		<p class='propri'  id='price13'></p>
+        	</a>
+        </div>
+       <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+       	<a href='' class='probox'  id='p14' >
+       		<img src id='pimg14' alt="" class='img-fluid'>
+       		<p class='proname' id='pname14'></p>
+       		<p class='proint'  id='pint14'></p>
+       		<p class='propri'  id='price14'></p>
+       	</a>
+       </div>
+       <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+        	<a href='' class='probox'  id='p15' >
+        		 <img src id='pimg15' alt="" class='img-fluid'>
+        		 <p class='proname' id='pname15'></p>
+        		 <p class='proint'  id='pint15'></p>
+        		 <p class='propri'  id='price15'></p>
+        	</a>
+        </div>
+    </div>
+
+    <br/>
+    <h3>Fiil系列</h3>
+	 <div class="line"></div>
+    <div class="row no-gutters  " id="pr5" >
+        <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+        	<a href='' class='probox'  id='p16' >
+        		<img src id='pimg16' alt="" class='img-fluid'>
+        		<p class='proname' id='pname16'></p>
+        		<p class='proint'  id='pint16'></p>
+        		<p class='propri'  id='price16'></p>
+        	</a>
+        </div>
+       <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+        	<a href='' class='probox'  id='p17' >
+        		<img src id='pimg17' alt="" class='img-fluid'>
+        		<p class='proname' id='pname17'></p>
+        		<p class='proint'  id='pint17'></p>
+        		<p class='propri'  id='price17'></p>
+        	</a>
+        </div>
+        <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+        	<a href='' class='probox'  id='p18' >
+        		<img src id='pimg18' alt="" class='img-fluid'>
+        		<p class='proname' id='pname18'></p>
+        		<p class='proint'  id='pint18'></p>
+        		<p class='propri'  id='price18'></p>
+        	</a>
+        </div>
+        <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+        	<a href='' class='probox'  id='p19' >
+        		<img src id='pimg19' alt="" class='img-fluid'>
+        		<p class='proname' id='pname19'></p>
+        		<p class='proint'  id='pint19'></p>
+        		<p class='propri'  id='price19'></p>
+        	</a>
+        </div>
+    </div>
+
+    <br/>
+    <h3>耳机配件</h3>
+	 <div class="line"></div>
+    <div class="row no-gutters  " id="pr6" >
+      <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+      	<a href='' class='probox'  id='p20' >
+      		<img src id='pimg20' alt="" class='img-fluid'>
+      		<p class='proname' id='pname20'></p>
+      		<p class='proint'  id='pint20'></p>
+      		<p class='propri'  id='price20'></p>
+      	</a>
+      </div>
+       <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+       	<a href='' class='probox'  id='p21' >
+       		<img src id='pimg21' alt="" class='img-fluid'>
+       		<p class='proname' id='pname21'></p>
+       		<p class='proint'  id='pint21'></p>
+       		<p class='propri'  id='price21'></p>
+       	</a>
+       </div>
+       <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2">
+       	<a href='' class='probox'  id='p22' >
+       		<img src id='pimg22' alt="" class='img-fluid'>
+       		<p class='proname' id='pname22'></p>
+       		<p class='proint'  id='pint22'></p>
+       		<p class='propri'  id='price22'></p>
+       	</a>
+       </div>
+	   <div class="mb-1 col-md-5 col-lg col-sm-12 mb-1 bg-white mr-2" style='opacity: 0;'>
+	   </div>
+	  
+    </div>
+ </div>
+
+    <div id="footer" class="d-none d-md-block bg-dark w-100 mt-4 p-2 ">
+
+        <div id="foot_top" class="row justify-content-between">
+            
+            <div class="col-md-2 col-5">
+                <div class="row text-center">
+                <p class="col-12 mb-2">服务支持</p>
+                <a class="col-12 mb-2" href="./after_sold.html" >售后政策</a>
+                <a class="col-12 mb-2" href="./helper of  use.html" >操作说明</a>
+                </div>
+            </div>
+            <div class="col-md-2 col-5">
+                <div class="row">
+                    <p class="col-12 mb-2">帮助中心</p>
+                    <a class="col-12 mb-2" href="paymethod.html" >支付方式</a>
+                    <a class="col-12 mb-2" href="postmethod.html" >配送方式</a>
+                    <a class="col-12 mb-2" href="q&a.html" >常见问题</a>
+                </div>
+            </div>
+            <div class="col-md-2 col-5">
+                <div class="row">
+                    <p class="col-12 mb-2">关于我们</p>
+                    <a class="col-12 mb-2" href="" >图片视频</a>
+                    <a class="col-12 mb-2" href="priv.html " >隐私条款</a>
+                    <a class="col-12 mb-2" href="law.html" >法律声明</a>
+                </div>
+            </div>
+            <div class="col-md-2 col-5">
+                <div class="row">
+                    <p class="col-12 mb-2">关注我们</p>
+                    <a class="col-12 mb-2" href="" >联系我们</a>
+                    <a class="col-12 mb-2" href="" >加入我们</a>
+                </div>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr class="bg-dark"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-12 col-md-5" id="foot_b">
+                <p class="text-light">Copyright © 2015-2018, Fengfan (Beijing) Technology Co., Ltd. All Rights Reserved.
+
+                    峰范（北京）科技有限公司 | 京ICP备15026427号</p>
+            </div>
+			<div class="col-3"></div>
+            <div class="d-none d-md-block col-md-2 text-right">
+                <p style="color:white;font-size:13px;">400-850-7997</p>
+            </div>
+        </div>
+    </div> 
+
+
+</div>
+
+<script>
+
+ function serve()
+{
+    serve.style="height:50px"
+}
+
+onload=function()
+	{
+  
+  var xhr=new XMLHttpRequest;
+	xhr.onreadystatechange=function()
+		{
+			if(xhr.readyState==4&&xhr.status==200)
+				{ 
+					let result=xhr.responseText;
+					let arr=JSON.parse(result);
+				
+					pname1.innerHTML=`${arr[0].pname}`;
+				  document.getElementById('pimg1').src=`${arr[0].pimg}`;
+				  price1.innerHTML=`${arr[0].price}元`;
+				  pint1.innerHTML=`${arr[0].pdetail}`;
+
+					pname2.innerHTML=`${arr[1].pname}`;
+				  document.getElementById('pimg2').src=`${arr[1].pimg}`;
+				  price2.innerHTML=`${arr[1].price}元`;
+				  pint2.innerHTML=`${arr[1].pdetail}`;
+
+					
+					pname3.innerHTML=`${arr[2].pname}`;
+				  document.getElementById('pimg3').src=`${arr[2].pimg}`;
+				  price3.innerHTML=`${arr[2].price}元`;
+				  pint3.innerHTML=`${arr[2].pdetail}`;
+
+					pname4.innerHTML=`${arr[3].pname}`;
+				  document.getElementById('pimg4').src=`${arr[3].pimg}`;
+				  price4.innerHTML=`${arr[3].price}元`;
+				  pint4.innerHTML=`${arr[3].pdetail}`;
+
+					pname5.innerHTML=`${arr[4].pname}`;
+				  document.getElementById('pimg5').src=`${arr[4].pimg}`;
+				  price5.innerHTML=`${arr[4].price}元`;
+				  pint5.innerHTML=`${arr[4].pdetail}`;
+
+					pname6.innerHTML=`${arr[5].pname}`;
+				  document.getElementById('pimg6').src=`${arr[5].pimg}`;
+				  price6.innerHTML=`${arr[5].price}元`;
+				  pint6.innerHTML=`${arr[5].pdetail}`;
+
+					pname7.innerHTML=`${arr[6].pname}`;
+				  document.getElementById('pimg7').src=`${arr[6].pimg}`;
+				  price7.innerHTML=`${arr[6].price}元`;
+				  pint7.innerHTML=`${arr[6].pdetail}`;
+
+					pname8.innerHTML=`${arr[7].pname}`;
+				  document.getElementById('pimg8').src=`${arr[7].pimg}`;
+				  price8.innerHTML=`${arr[7].price}元`;
+				  pint8.innerHTML=`${arr[7].pdetail}`;
+          
+					pname9.innerHTML=`${arr[8].pname}`;
+				  document.getElementById('pimg9').src=`${arr[8].pimg}`;
+				  price9.innerHTML=`${arr[8].price}元`;
+				  pint9.innerHTML=`${arr[8].pdetail}`;
+
+          pname10.innerHTML=`${arr[9].pname}`;
+				  document.getElementById('pimg10').src=`${arr[9].pimg}`;
+				  price10.innerHTML=`${arr[9].price}元`;
+				  pint10.innerHTML=`${arr[9].pdetail}`;
+
+					
+				  pname11.innerHTML=`${arr[10].pname}`;
+				  document.getElementById('pimg11').src=`${arr[10].pimg}`;
+				  price11.innerHTML=`${arr[10].price}元`;
+				  pint11.innerHTML=`${arr[10].pdetail}`;
+
+					pname12.innerHTML=`${arr[11].pname}`;
+				  document.getElementById('pimg12').src=`${arr[11].pimg}`;
+				  price12.innerHTML=`${arr[11].price}元`;
+				  pint12.innerHTML=`${arr[11].pdetail}`;
+
+					pname13.innerHTML=`${arr[12].pname}`;
+				  document.getElementById('pimg13').src=`${arr[12].pimg}`;
+				  price13.innerHTML=`${arr[12].price}元`;
+				  pint13.innerHTML=`${arr[12].pdetail}`;
+
+					pname14.innerHTML=`${arr[13].pname}`;
+				  document.getElementById('pimg14').src=`${arr[13].pimg}`;
+				  price14.innerHTML=`${arr[13].price}元`;
+				  pint14.innerHTML=`${arr[13].pdetail}`;
+
+					pname15.innerHTML=`${arr[14].pname}`;
+				  document.getElementById('pimg15').src=`${arr[14].pimg}`;
+				  price15.innerHTML=`${arr[14].price}元`;
+				  pint15.innerHTML=`${arr[14].pdetail}`;
+
+					pname16.innerHTML=`${arr[15].pname}`;
+				  document.getElementById('pimg16').src=`${arr[15].pimg}`;
+				  price16.innerHTML=`${arr[15].price}元`;
+				  pint16.innerHTML=`${arr[15].pdetail}`;
+
+					pname17.innerHTML=`${arr[16].pname}`;
+				  document.getElementById('pimg17').src=`${arr[16].pimg}`;
+				  price17.innerHTML=`${arr[16].price}元`;
+				  pint17.innerHTML=`${arr[16].pdetail}`;
+
+					pname18.innerHTML=`${arr[17].pname}`;
+				  document.getElementById('pimg18').src=`${arr[17].pimg}`;
+				  price18.innerHTML=`${arr[17].price}元`;
+				  pint18.innerHTML=`${arr[17].pdetail}`;
+					
+					pname19.innerHTML=`${arr[18].pname}`;
+				  document.getElementById('pimg19').src=`${arr[18].pimg}`;
+				  price19.innerHTML=`${arr[18].price}元`;
+				  pint19.innerHTML=`${arr[18].pdetail}`;
+
+					pname20.innerHTML=`${arr[19].pname}`;
+				  document.getElementById('pimg20').src=`${arr[19].pimg}`;
+				  price20.innerHTML=`${arr[19].price}元`;
+				  pint20.innerHTML=`${arr[19].pdetail}`;
+
+					pname21.innerHTML=`${arr[20].pname}`;
+				  document.getElementById('pimg21').src=`${arr[20].pimg}`;
+				  price21.innerHTML=`${arr[20].price}元`;
+				  pint21.innerHTML=`${arr[20].pdetail}`;
+          
+					pname22.innerHTML=`${arr[21].pname}`;
+				  document.getElementById('pimg22').src=`${arr[21].pimg}`;
+				  price22.innerHTML=`${arr[21].price}元`;
+				  pint22.innerHTML=`${arr[21].pdetail}`;
+
+					i1.src=`${arr[0].pimg}`;
+					i1a.innerHTML=`${arr[0].pname}`;
+
+					i2.src=`${arr[1].pimg}`;
+					i2a.innerHTML=`${arr[1].pname}`;
+
+					i3.src=`${arr[2].pimg}`;
+					i3a.innerHTML=`${arr[2].pname}`;
+
+					i4.src=`${arr[3].pimg}`;
+					i4a.innerHTML=`${arr[3].pname}`;
+
+					i5.src=`${arr[4].pimg}`;
+					i5a.innerHTML=`${arr[4].pname}`;
+
+					i6.src=`${arr[5].pimg}`;
+					i6a.innerHTML=`${arr[5].pname}`;
+
+					i7.src=`${arr[6].pimg}`;
+					i7a.innerHTML=`${arr[6].pname}`;
+					
+					i8.src=`${arr[7].pimg}`;
+					i8a.innerHTML=`${arr[7].pname}`;
+
+					i9.src=`${arr[8].pimg}`;
+					i9a.innerHTML=`${arr[8].pname}`;
+
+					i10.src=`${arr[9].pimg}`;
+					i10a.innerHTML=`${arr[9].pname}`;
+					
+					i11.src=`${arr[10].pimg}`;
+					i11a.innerHTML=`${arr[10].pname}`;
+
+					i12.src=`${arr[11].pimg}`;
+					i12a.innerHTML=`${arr[11].pname}`;
+
+					i13.src=`${arr[12].pimg}`;
+					i13a.innerHTML=`${arr[12].pname}`;
+
+					i14.src=`${arr[13].pimg}`;
+					i14a.innerHTML=`${arr[13].pname}`;
+
+					i15.src=`${arr[14].pimg}`;
+					i15a.innerHTML=`${arr[14].pname}`;
+
+					i16.src=`${arr[15].pimg}`;
+					i16a.innerHTML=`${arr[15].pname}`;
+
+					i17.src=`${arr[14].pimg}`;
+					i17a.innerHTML=`${arr[14].pname}`;
+
+					i18.src=`${arr[17].pimg}`;
+					i18a.innerHTML=`${arr[17].pname}`;
+
+					i19.src=`${arr[18].pimg}`;
+					i19a.innerHTML=`${arr[18].pname}`;
+
+					i20.src=`${arr[19].pimg}`;
+					i20a.innerHTML=`${arr[19].pname}`;
+
+					i21.src=`${arr[20].pimg}`;
+					i21a.innerHTML=`${arr[20].pname}`;
+					
+					i22.src=`${arr[21].pimg}`;
+					i22a.innerHTML=`${arr[21].pname}`;
+					 
+					 
+				for(var i=1;i<=22;i++)
+					{
+					document.getElementById(`p${i}`).href=arr[i-1].href;
+				    }
+		
+				
+				  i1a.href= arr[0].href  
+				  i2a.href= arr[1].href  
+				  i3a.href= arr[2].href  
+				  i4a.href= arr[3].href  
+				  i5a.href= arr[4].href  
+				  i6a.href= arr[5].href  
+				  i7a.href= arr[6].href  
+				  i8a.href= arr[7].href  
+				  i9a.href= arr[8].href  
+				  i10a.href= arr[9].href  
+				  i11a.href= arr[10].href  
+				  i12a.href= arr[11].href  
+				  i13a.href= arr[12].href  
+				  i14a.href= arr[13].href  
+				  i15a.href= arr[14].href  
+				  i16a.href= arr[15].href  
+				  i17a.href= arr[16].href  
+				  i18a.href= arr[17].href  
+				  i19a.href= arr[18].href  
+				  i20a.href= arr[19].href  
+	    	      i21a.href= arr[20].href  
+				  i22a.href= arr[21].href  
+				}
+		}
+		xhr.open('get','/user/index/',true);
+		xhr.send();
+	}
+	
+	function drawer1()
+	{
+	 document.getElementById('drawer1').style='display:block';
+	}
+	function drawer1s()
+	{
+	 document.getElementById('drawer1').style='display:none';
+	}
+	
+	function drawer2()
+	{
+	 document.getElementById('drawer2').style='display:block';
+	}
+	function drawer2s()
+	{
+	 document.getElementById('drawer2').style='display:none';
+	}
+	
+	function drawer3()
+	{
+	 document.getElementById('drawer3').style='display:block';
+	}
+	function drawer3s()
+	{
+	 document.getElementById('drawer3').style='display:none';
+	}
+	
+	function drawer4()
+	{
+	 document.getElementById('drawer4').style='display:block';
+	}
+	function drawer4s()
+	{
+	 document.getElementById('drawer4').style='display:none';
+	}
+	
+	function drawer5()
+	{
+	 document.getElementById('drawer5').style='display:block';
+	}
+	function drawer5s()
+	{
+	 document.getElementById('drawer5').style='display:none';
+	}
+	
+	function drawer6()
+	{
+	 document.getElementById('drawer6').style='display:block';
+	}
+	function drawer6s()
+	{
+	 document.getElementById('drawer6').style='display:none';
+	}
+	
+	function drawer7()
+	{
+	 document.getElementById('drawer7').style='display:block';
+	}
+	function drawer7s()
+	{
+	 document.getElementById('drawer7').style='display:none';
+	}
+	
+	function drawer8()
+	{
+	 document.getElementById('drawer8').style='display:block';
+	}
+	function drawer8s()
+	{
+	 document.getElementById('drawer8').style='display:none';
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<view
+style='background-color:rgb(230,89,84);height:12%;color:white;font-size:30rpx;font-weight:800;padding:20rpx;'>关于我们</view>
+<view class='box'>
+  <textarea disabled>
+  <view>
+  秦皇岛中仕科技开发有限公司于2015年08月28日成立，总部位于国际旅游滨海度假区——秦皇岛。公司是由秦皇岛金北基金和燕软集团等多个股东联合投资成立的股份制科技型公司，旗下业务包含在线教育平台“中仕学社”，“中仕学社”职业技能培训学校。公司为秦皇岛市政府重点扶持单位，是人社局定点职业培训机构。
+  </view>
+  <view style='margin-top:40rpx;'></view>
+  <view>愿景：每天学习一小时</view>
+    <view style='margin-top:40rpx;'></view>
+    <view>品牌定位：您身边的职业提升助手</view>
+     <view style='margin-top:40rpx;'></view>
+     <view>平台定位：O2O职业技能教育平台</view>
+</textarea>
+</view>
+<image src='/icon/gc_ic_cancel_b_pressed.png'
+mode='widthFix'
+bindtap="gohome"
+class='back'></image>

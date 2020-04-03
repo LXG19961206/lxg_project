@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{background-color: rgba(f,f,f,0.05);
+	     width: 1000px;
+			 transition:all 0.5s;
+		   font-family: "book antiqua" ;
+			 zoom:90%;
+			 overflow: auto;
+			 }
+		.top_top
+	{
+	width: 1000px;
+	margin-left: 65%;
+	
+	}
+	.top_top a
+	{
+	text-decoration: none;
+	font-size: 14px;
+	margin-left: 50px;
+	color:black;	
+	line-height: 45px;
+	}
+	.login{width: 50px;
+				height: 30px;
+				text-align: center;
+				color:#999;
+				position: absolute;
+				top: 10px;
+				right: 5%;
+				font-size: 20px;
+				cursor:pointer;
+				}
+	.reg{width: 50px;
+				height: 30px;
+				text-align: center;
+				color:#999;
+				position: absolute;
+				top: 10px;
+				right: 2%;
+				font-size: 20px;
+				cursor:pointer;
+				}
+	#ser {
+				 width: 1920px;
+	       position: absolute;
+				 left: 8px;
+				 top: 53px;
+				 background-color: white;
+				 height: 0px;
+				 z-index: 1;
+				 transition:0.5s all;
+				 overflow: hidden;
+			   box-sizing:border-box;
+				 padding-left: 30%;
+			 }
+  #ser ul
+	     {float: left;
+			  margin-right:100px;
+				margin-top: 20px;
+			 }
+	</style>
+</head>
+<body>
+	<div class="top_top	">
+	<a class="login" href='./login.html'>登录</a><a href="./reg.html" class="reg">注册</a>
+	<a href="" style='margin-top: 60px; '   >FIIL斐耳</a>
+	<a  id='earserve' href='#serve' onmouseover='serve()' >耳机服务
+		<div id='ser' onmouseover='serve()' onmouseout='serve2()'>
+			<ul>下载fiil+</ul>
+			<ul>线下门店</ul>
+			<ul>产品注册</ul>
+			<ul>正品验证</ul>	
+		</div>
+	</a>
+	<a href="">体验店</a>
+	<a href="">新闻资讯</a>
+</div>
+<script>
+function serve()
+	{
+	ser.style='height:90px';
+	}
+  function serve2()
+	{
+	ser.style='height:0px';
+	}
+
+</script>
+</body>
+</html>

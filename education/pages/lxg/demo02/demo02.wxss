@@ -1,0 +1,107 @@
+#top{
+height:300rpx;
+background: linear-gradient(to right, #ddd6f3, #faaca8);
+}
+#top>image{
+  width:200rpx;
+  height:200rpx;
+  border-radius: 50%;
+  border:2px solid white;
+  margin-top:200rpx;  
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+}
+#top>text{
+  color:white;
+  font-weight: 800;
+  position: absolute;
+  top:60rpx;
+  font-size: 40rpx;
+  left: 50%;
+  transform: translate(-50%);
+}
+#top2{
+  position: relative;
+  background: white;
+  height: 240rpx;
+}
+#top2>text:first-child{
+  position: absolute;
+  top:10rpx;
+  left: 30%;
+}
+#top2>text:nth-child(2){
+  position: absolute;
+  top:60rpx;
+  left: 22%;
+  color:#aaa;
+  font-size: 25rpx;
+}
+#top2>text:nth-child(3){
+  position: absolute;
+  top:10rpx;
+  right: 30%;
+}
+#top2>text:nth-child(4){
+  position: absolute;
+  top:60rpx;
+  right: 22%;
+  color:#aaa;
+  font-size: 25rpx;
+}
+.group{
+  display: flex;
+  justify-content: space-around;
+  margin-top:150rpx; 
+}
+.item{
+  height: 66rpx;
+  width: 30%;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  left: -5%;
+ 
+}
+.item>image{
+  width: 66rpx;
+  height:66rpx;
+}
+.item>text{
+  color:#666;
+  font-size: 27rpx;
+  position: absolute;
+  top: 50%;
+  transform: translate(20%,-50%);
+}
+#list{
+  background: #fff;
+  margin-top: 30rpx;
+}
+.list-item{
+  display: flex;
+  position: relative;
+  border-bottom:1px solid #eee;
+  padding: 15rpx;
+  height: 38rpx;
+   background-image:url(https://s2.ax1x.com/2020/02/07/121vCR.png) ;
+  background-position: 95%;
+  background-size:40rpx;
+  background-repeat:no-repeat; 
+}
+.list-item>image{
+  width: 38rpx;
+  height:38rpx;
+}
+.list-item>text{
+  font-size: 26rpx;
+  font-weight: 700;
+  color:#666;
+  margin-left:24rpx; 
+}
+.blank{
+  background: #efefef;
+  height:20rpx;
+}

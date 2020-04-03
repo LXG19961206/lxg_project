@@ -1,0 +1,20 @@
+textarea{ 
+  width: 80%;
+  background-color: rgba(0,0,0,0.025);
+  font-size: 25rpx;
+  overflow: hidden;
+  height:auto;
+  padding: 20rpx;
+  border:1px solid #bbb;
+  margin:80rpx auto;
+  border-radius:10%; 
+}
+.back{
+  width: 14%;
+  position:fixed;
+  top:85%;
+  left: 50%;
+  opacity: 0.5;
+  z-index: 20;
+  transform: translate(-50%);
+}

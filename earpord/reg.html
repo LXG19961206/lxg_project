@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{background-color: #efefef;}
+	.box{width: 1920px;
+	     box-sizing:border-box;
+			 padding:0 40px;
+			 }
+	.login_box
+			{width: 1800px;
+			 height: 500px;
+			background-color: white;
+			text-align: center;
+			margin-top: 40px;
+			}
+	
+	.login{margin: auto;
+	       padding: 50px;
+				 box-sizing:border-box;
+				 }
+				
+	.nor  {border-top:0;
+				border-left:0;
+				border-right:0;
+				border-bottom:1px solid #ccc;
+				width: 300px;
+				height: 40px;
+				box-sizing:border-box;
+				padding-left: 25px;
+				margin-top: 10px;}
+	button
+			{
+			background-color: black;
+			width: 300px;
+			height: 40px;
+			line-height: 30px;
+			color:white;
+			font-size: 20px;
+			margin-top: 20px;
+			}
+	[type="checkbox"]
+	    {
+			margin-top: -20px;
+			}
+	h3{text-align: center;
+	   font-size: 22px;}
+	#checks 
+	{
+	width: 90px;
+	height: 40px;
+	background-color: rgba(0,0,0,0.1);
+	line-height: 40px;
+	text-align: center;
+  position: relative;
+	top:-200px;
+	left: 910px;
+	cursor:pointer;
+	}
+	span{font-size: 14px;
+	     color:red;}
+  </style>	
+</head>
+<body>
+	<div class="box">
+		<div class='login_box'>
+      <div class="login">
+				<h3>注册账号</h3>
+        <input id='uname' class='nor' type="" placeholder='请输入用户名'><span id='i1'></span><br>
+				<input id='phone' class='nor' type="" placeholder='请输入手机号'><span id='i2'></span><br>
+				<input class='nor' type="" placeholder='请输入验证码' id='che' onmouseover='checkboxs()'><br>
+				<input id='upwd' class='nor' type="password" placeholder='请输入密码长度在6-12之间'><span id='i3'></span><br>
+				<input id='upwd2' class='nor' type="password" placeholder='确认密码'><span id='i4'></span><br>
+				<button	onclick='reg()'>注册</button><br>
+				<div id='checks'>获取验证码</div>
+				<input type="checkbox" id='checkbox' value>我已阅读并且遵守《FIL科技服务协议》
+			</div>
+	  </div>
+	</div>
+<script>
+	 var obj=['1','2','3','4','5','6','7','8','9','0','a','b','c','d','e','f','g','h','i','j','k','l','m'];
+			var chec='';
+			for(var i=1;i<=4;i++)
+			{
+			let check=Math.ceil(Math.random()*22);
+			chec+=obj[check];
+			}
+
+		function checkboxs()
+		{
+			
+			checks.innerHTML=chec;
+			
+		}
+
+	function reg()
+  { if(che.value!=chec){ alert('验证码错误');window.open('http://127.0.0.1:8080/reg.html')}
+		if(!uname.value){ alert('用户名不能为空');return}
+		if(!phone.value){ alert('注册手机号不能为空');return}
+		if(!upwd.value){ alert('密码不能为空');return}
+		if(!upwd2.value){ alert('请再次输入密码');return}
+		
+		if(checkbox.checked)
+	  { 
+	    checkbox.value=1
+		}
+		else
+		{
+			checkbox.value=0;
+			alert('请勾选服务协议');
+			uname.value='';
+			che.value='';
+			phone.value='';
+			upwd.value='';
+			upwd2.value='';
+			return;
+		}
+		if (upwd.value!=upwd2.value)
+		{
+			alert('两次输入不一致');
+		}
+		var xhr=new XMLHttpRequest();
+		xhr.onreadystatechange=function()
+			{
+				if(xhr.readyState==4&&xhr.status==200)
+				{
+					let result=xhr.responseText;
+					if (result==1){alert('恭喜您注册成功')
+					window.open('http://127.0.0.1:8080/index-reborn.html')}
+					else if (result==0){alert('很遗憾,注册失败')};
+				}
+			}
+		xhr.open('get','/user/reg/'+uname.value+'&'+phone.value+'&'+upwd.value)
+		xhr.send();
+	}
+
+	
+
+</script>	
+
+</body>
+</html>

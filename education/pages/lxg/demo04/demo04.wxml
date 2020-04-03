@@ -1,0 +1,159 @@
+<!--pages/lxg/demo04/demo04.wxml-->
+<view id='top'>——视频学习课程——</view>
+<view id='menu'>
+  <view class='item' bindtap="to_switch"
+  data-switch='{{0}}'><text>考试</text></view>
+  <view class='item' bindtap="to_switch"
+  data-switch='{{1}}'><text>工作</text></view>
+  <view class='item' bindtap="to_switch"
+  data-switch='{{2}}'><text>生活</text></view>
+</view>
+<view id='content'>
+  <view id='test' style="display:{{switch[0]}}">
+    <text class='title'>经管财</text>
+  <view class='itembox'>
+  <text wx:for='{{testmsg.eco}}' wx:key='*this'
+   data-course='eco'
+  bindtap="godetails">{{item}}</text>
+</view>
+<text class='title'>医药卫</text>
+<view class='itembox'>
+  <text wx:for='{{testmsg.med}}' wx:key='*this'
+  data-course='med'
+  bindtap="godetails">{{item}}</text>
+</view>
+<text class='title'>建筑类</text>
+<view class='itembox'>
+  <text wx:for='{{testmsg.bui}}' wx:key='*this'
+  data-course='bui'
+  bindtap="godetails">{{item}}</text>
+</view>
+
+<text class='title'>语言类</text>
+<view class='itembox'>
+  <text wx:for='{{testmsg.lan}}' wx:key='*this'
+  data-course='lan'
+  bindtap="godetails">{{item}}</text>
+</view>
+
+<text class='title'>公职类</text>
+<view class='itembox'>
+  <text wx:for='{{testmsg.pub}}' wx:key='*this'
+  data-course='pub'
+  bindtap="godetails">{{item}}</text>
+</view>
+
+<text class='title'>学历类</text>
+<view class='itembox'>
+  <text wx:for='{{testmsg.stu}}' wx:key='*this'
+  data-course='stu'
+  bindtap="godetails">{{item}}</text>
+</view>
+
+<text class='title'>计算机</text>
+<view class='itembox'>
+  <text wx:for='{{testmsg.com}}' wx:key='*this'
+  data-course='com'
+  bindtap="godetails">{{item}}</text>
+</view>
+  </view>
+  <view id='job' style="display:{{switch[1]}}">
+    <text class='title'>ui设计</text>
+    <view class='itembox'>
+      <text wx:for='{{job.it}}' wx:key='*this'
+      data-course='ui'
+      bindtap="godetails">{{item}}</text>
+    </view>
+
+     <text class='title'>通用设计</text>
+    <view class='itembox'>
+      <text wx:for='{{job.abi}}' wx:key='*this'
+       data-course='abi'
+  bindtap="godetails">{{item}}</text>
+    </view>
+
+    <text class='title'>管理素质</text>
+    <view class='itembox'>
+      <text wx:for='{{job.abi2}}' wx:key='*this'
+       data-course='abi2'
+       bindtap="godetails">{{item}}</text>
+    </view>
+
+    <text class='title'>大学生以及行业专题</text>
+    <view class='itembox'>
+      <text wx:for='{{job.col}}' wx:key='*this'
+       data-course='col'
+       bindtap="godetails">{{item}}</text>
+    </view>
+
+    <text class='title'>专业技能</text>
+    <view class='itembox'>
+      <text wx:for='{{job.ski}}' wx:key='*this'
+       data-course='ski'
+       bindtap="godetails">{{item}}</text>
+    </view>
+
+    <text class='title'>公务员专题</text>
+    <view class='itembox'>
+      <text wx:for='{{job.pub}}' wx:key='*this'
+       data-course='pub'
+       bindtap="godetails">{{item}}</text>
+    </view>
+
+    <text class='title'>农民专题</text>
+    <view class='itembox'>
+      <text wx:for='{{job.far}}' wx:key='*this'
+       data-course='farm'
+       bindtap="godetails">{{item}}</text>
+    </view>
+  </view>
+
+  <view id='live' style="display:{{switch[2]}}">
+     <text class='title'>家庭</text>
+    <view class='itembox'>
+      <text wx:for='{{live.fam}}' wx:key='*this'
+       data-course='family'
+       bindtap="godetails">{{item}}</text>
+    </view>
+     <text class='title'>健康</text>
+    <view class='itembox'>
+      <text wx:for='{{live.hea}}' wx:key='*this'
+       data-course='heal'
+       bindtap="godetails">{{item}}</text>
+    </view>
+    <text class='title'>休闲</text>
+    <view class='itembox'>
+      <text wx:for='{{live.rel}}' wx:key='*this'
+       data-course='rel'
+       bindtap="godetails">{{item}}</text>
+    </view>
+    <text class='title'>修养</text>
+    <view class='itembox'>
+      <text wx:for='{{live.exe}}' wx:key='*this'
+       data-course='rel2'
+       bindtap="godetails">{{item}}</text>
+    </view>
+    <text class='title'>视野</text>
+    <view class='itembox'>
+      <text wx:for='{{live.vie}}' wx:key='*this'
+       data-course='view'
+       bindtap="godetails">{{item}}</text>
+    </view>
+    <text class='title'>兴趣</text>
+    <view class='itembox'>
+      <text wx:for='{{live.int}}' wx:key='*this'
+       data-course='int'
+       bindtap="godetails">{{item}}</text>
+    </view>
+    <text class='title'>科普</text>
+    <view class='itembox'>
+      <text wx:for='{{live.sci}}' wx:key='*this'
+       data-course='view'
+       bindtap="godetails">{{item}}</text>
+    </view>
+  </view>
+</view>
+
+
+
+

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0;
+			padding: 0;}
+		.top
+		{
+		width: 70%;
+		height: 20%;
+		margin: auto;
+		background-color: #efefef;
+		padding: 1.5rem	;
+		text-align: center;
+		}
+
+		.top h1
+		{
+		margin-bottom: 2rem;
+		}
+		.top p
+		{
+		color:#777;
+		font-size: 15px;
+		}
+
+		.button
+		{
+		display: block;
+		background-color: #dd0041;
+		width: 120px;
+		height: 35px;
+		color:white;
+		font-size: 14px;
+		text-align: center;
+		text-decoration: none;
+		line-height: 35px;
+		margin:10rem 45%;
+		transition:0.5s all;
+		}
+		
+		.content
+		{
+		width: 20%;
+		position: absolute;
+		left: 50%;
+		transform:translate(-50%);
+		}
+		
+		input
+		{
+	  width: 75%;
+		height:40px;
+		border:0px;
+		border-bottom:1px solid #999;
+		margin-top: 2rem;
+		outline:none;
+		}
+    
+		span
+		{
+		margin-left: -90%;
+		color:#444;
+		}
+
+    #check
+		{margin-left: 65%;
+		border:1px solid black;
+		position: absolute;
+		padding: 10px;
+    bottom: 0;
+		}
+		
+	.infobox
+		{
+		width: 20%;
+		height: 20%;
+		position: absolute;
+		left: 50%;
+		transform:translate(-50%);
+		}
+		
+		@media screen and (max-width:800px)
+		{
+		input + span {position: relative;left(-100px)}
+		}
+    
+		.button:hover
+		{
+		transform:scale(1.1);
+		}
+		
+	</style>	
+</head>
+<body>
+	<div class="box">
+		<div class="top">
+			<h1>正品验证</h1>
+			<p>若您在防伪查询过程中,出现任何的查询异常或者疑问,请向购机经销商或者FILI售后服务中心咨询</p>
+		</div>
+		<div class="content">
+			<input type="" id='i1' onclick='gn()'><span id='s1'>SN:</span><br>
+			 
+		  <input type="" id='i2' onclick='hn()' ><span id='s2'>验证码:</span><span id='check' onclick='fn()'></span><br>
+		</div>
+		<a class='button' href onclick='checks()'>提交</a>
+	</div>
+
+	<div class="infobox">
+	
+	</div>	
+	<script>
+	let obj=['1','2','3','4','5','6','7','8','9','0','a','b','c','d','e','f','g','h','i','j','k','l','m'];
+			
+			
+			var che='';
+			for(var i=1;i<=4;i++)
+			{
+			let check=Math.ceil(Math.random()*22);
+			che+=obj[check];
+			}
+
+			onload=function fn()
+			{
+				
+				check.innerHTML=`${che}`
+
+			}
+			function gn()
+			{
+			document.getElementById('s1').style='position:relative';
+			}
+			
+
+			function hn()
+			{
+			document.getElementById('s2').style='position:relative';
+			}
+
+				function checks()
+			{
+			
+			if (!i1.value)
+				{
+					alert('请您输入产品的SN码')
+					return;
+				}
+			if(!i2.value)
+				{
+					alert('请您输入验证码')
+				}
+			if(i2.value==che)
+				{
+				alert('验证码输入正确');
+				window.open('http://127.0.0.1:8080/index-reborn.html')
+				return;
+				}
+			if(i2.value!==che)
+				{
+				alert('验证码输入错误')
+				}
+
+
+			}
+	</script>
+</body>
+</html>

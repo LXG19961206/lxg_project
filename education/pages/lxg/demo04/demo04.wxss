@@ -1,0 +1,61 @@
+/* pages/lxg/demo04/demo04.wxss */
+page{
+  background-color: #efefef;
+}
+
+#top{
+  background-color: #efefef;
+  font-size:30rpx;
+  text-align: center;
+  padding:20rpx;
+  font-weight: 600;
+  height:100%;
+}
+.item text{
+  font-size: 29rpx;
+  font-weight: 600;
+}
+.item {
+  padding:30rpx;
+  border-bottom:1px #ddd solid;
+  width: 15%;
+  color:#666; 
+}
+.item:hover {
+  border-bottom:1px red solid;
+  color:red;
+}
+.title::before{
+  content:'';
+  width: 15rpx;
+  height:15rpx;
+  border-radius: 50%;
+  background-color:red;
+  display:inline-block;
+  margin: 5rpx 20rpx;
+}
+.title{
+  font-size: 32rpx;
+  color:#666;
+}
+
+.itembox>text{
+  display: inline-block;
+  height:100rpx;
+  width:31%;
+  word-wrap: break-word;
+  line-height: 100rpx;
+  text-align: center;
+  margin:12rpx 5rpx;
+  font-size: 24rpx;
+  color:#666;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 10rpx;
+}
+#content{
+  position: absolute;
+  top:100rpx;
+  left: 180rpx;
+}
+

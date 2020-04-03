@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fili</title>
+	<style>
+		a{text-decoration: none;}
+		.color a 
+		{
+		display: inline-block;
+		border:1px #aaa solid;
+		
+		color:black;
+		width: 80px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		margin-left: 5%;
+		margin-top: 5%;
+		cursor:pointer
+		}
+
+		.color a:hover
+		{
+		border:1px black solid;
+		}
+
+		button
+		{
+		width: 120px;
+		height: 40px;
+		background-color: #222;
+		color:white;
+		text-align: center;
+		line-height: 40px;
+		font-size: 17px;
+		position: absolute;
+		left: 50%;
+		transform:translate(-50%,50%);
+		}
+		.box
+		{position: absolute;
+		top: 10%;
+		left: 40%;
+		transform:translate(-50%);}
+		.shopping
+		{
+		position: absolute;
+		top: 13%;
+		left: 60%;
+		transform:translate(-50%);
+		
+		
+		}
+		h1
+		{
+		font-weight: 400;
+		}
+		.p1
+		{color:#bbb;
+		font-size: 15px;}
+		.p2
+		{float: right;
+		margin-top: -20px;
+		font-weight: 600;}
+		hr
+		{clear:both;}
+		.number
+		{margin-top: 5%;}
+		.number input
+		{margin-left: 5%;
+		height: 25px;
+		width: 60px;
+		border:1px solid black;}
+		body>div{float: left;}
+		
+		table
+		{
+		border:1px solid black;	
+		max-height: 400px;
+		table-layout: fixed;
+		font-size: 13px;
+		}
+		
+		#buy_tab
+		{
+		position: relative;
+		}
+		#buy_ins
+		{
+		display: none;
+		width: 25%;
+		height: 1.5rem;
+		position: absolute;
+		left: 50%;
+		bottom: -1.5rem;
+		transform:translate(-50%);
+		background-color: #343434;
+		color:#efefef;
+		text-align: center;
+		font-weight: 700;
+		line-height: 1.5rem;
+		}
+		#pri
+		{
+		
+		}
+		
+	</style>
+</head>
+<body>
+<div class="box">
+	<h1>FILI T1 X真无线运动耳机</h1>
+	<p class='p1'>闪连&nbsp快充&nbsp秒同步</p>
+	<p class='p2'>¥399元</p>
+	<hr>
+	<div class='color'>
+		<span>颜色</span>
+		<a id='s1' class="select1" onclick='gn()'>曜石黑</a>
+		<a id='s2' class="select2" onclick='hn()'>影魔红</a>
+	</div>
+	<div class='number'>
+		<span>数量</span>
+		<input id='num' type="number">
+	</div>
+	<button onclick='fn()'>加入购物车</button>
+</div>
+<div class="shopping">
+	<div class="shop">
+     <table id='table' border="0">
+	   <tr>
+		 <td colspan='4'><span>商品总价:</span><span id='pri'>0</span><span>元</span>
+		
+		 <td><a href="">清空购物车</a></td>
+	   </tr>
+		 <tr id='buy_tab'>
+		 <td colspan=4><a id='buy_ins' href="" onclick='buy()'>立即购买</a></td>
+		 </tr>
+	</table>
+	</div>
+</div>
+	<script>
+		var obj='';
+		
+    onload=function()
+		{
+		 s1.style='border:1px solid black';
+		}
+		function gn()
+		{
+			 obj='曜石黑'
+      s1.style='border:1px solid black';
+		  s2.style='border:1px #aaa solid';
+		}
+			function hn()
+		{
+			 obj='影魔红'
+      s2.style='border:1px solid black';
+		  s1.style='border:1px #aaa solid';
+		}
+		function fn()
+		{	
+			let s=0;
+			s+=num.value;
+			if(s>999)
+			{
+			alert('超出购买限制,请您正确选择购买数量');
+			loaction.reload([bForceGet]);
+			}
+
+
+			if(num.value>0&&obj)
+			{
+			document.getElementById('pri').innerHTML=Number(document.getElementById('pri').innerHTML)+(399*num.value);
+			table.innerHTML+=
+			`
+			<tr>
+				<td colspan='2'>FILI T1 X真无线运动耳机</td>
+				<td>(${obj})*${num.value}</td>
+				<td></td>
+				<td>价格${num.value*399}元 &nbsp&nbsp&nbsp </td>
+			</tr>
+			`
+			buy_ins.style='display:block'
+			}
+		}
+
+		function buy()
+		{
+		let buy=Number(document.getElementById('pri').innerHTML);
+		alert(buy);
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function()
+				{
+					if (xhr.readtState==4&&xhr.status==200)
+					{
+					var result=xhr.responseText; 
+					}
+				}	
+			xhr.open('get','user/buy/'+buy,true);
+			xhr.send();
+		}
+	</script>
+
+</body>
+</html>

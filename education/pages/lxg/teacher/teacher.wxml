@@ -1,0 +1,96 @@
+<view
+style='background-color:rgb(230,89,84);height:12%;color:white;font-size:30rpx;font-weight:800;padding:20rpx;'>寻师台</view>
+<image src='/icon/tuijianmingshi.png'
+class='logo' mode='widthFix'></image>
+
+<view class='title'>健康养生类</view>
+<view class='group'>
+  <view class='item'>
+    <image src='http://www.chinaplat.com/imgzt/img-20170923/2017092310040538538.png'
+    mode='widthFix'></image>
+    <view class='name'>马艳芬</view>
+    <view class='job'>耳根治病专家</view>
+  </view>
+</view>
+
+
+<view class='title'>职业技能类</view>
+<view class='group'>
+  <view class='item'>
+    <image src='http://www.chinaplat.com/imgzt/img-20171031/20171031113915131513.jpg'
+    mode='widthFix'></image>
+    <view class='name'>曹老师</view>
+    <view class='job'>移动互联网开发</view>
+  </view>
+
+   <view class='item'>
+    <image src='http://www.chinaplat.com/imgzt/img-20171031/20171031115356955695.jpg'
+    mode='widthFix'></image>
+    <view class='name'>宋老师</view>
+    <view class='job'>丰富IT培训教育经验</view>
+  </view>
+
+  <view class='item'>
+    <image src='http://www.chinaplat.com/imgzt/img-20171031/20171031115122602260.png'
+    mode='widthFix'></image>
+    <view class='name'>李老师</view>
+    <view class='job'>十年的IT培训经验</view>
+  </view>
+</view>
+
+<view class='title'>企业培训师</view>
+<view class='group'>
+  <view class='item'>
+    <image src='http://www.chinaplat.com/imgzt/img-20171213/20171213110888968896.jpg'
+    mode='widthFix'></image>
+    <view class='name'>贾庆峰</view>
+    <view class='job'>高级企业培训师</view>
+  </view>
+
+   <view class='item'>
+    <image src='http://www.chinaplat.com/imgzt/img-20171213/20171213110888968896.jpg'
+    mode='widthFix'></image>
+    <view class='name'>贺建红</view>
+    <view class='job'>家庭教育讲师</view>
+  </view>
+
+  <view class='item'>
+    <image src='http://www.chinaplat.com/imgzt/img-20170923/20170923140274877487.jpg'
+    mode='widthFix'></image>
+    <view class='name'>曹爱宏</view>
+    <view class='job'>十年的TTT培训经验</view>
+  </view>
+</view>
+<view class='item'>
+    <image src='http://www.chinaplat.com/imgzt/img-20170923/20170923140274877487.jpg'
+    mode='widthFix'></image>
+    <view class='name'>丘立刚</view>
+    <view class='job'>资深演讲训练专家</view>
+  </view>
+
+  <view class='title'>刚需培训师</view>
+  <view class='group'>
+  <view class='item'>
+    <image src='http://www.chinaplat.com/imgzt/img-20171219/2017121915410780780.jpg'
+    mode='widthFix'></image>
+    <view class='name'>朱丽萍</view>
+    <view class='job'>人力资源管理优秀讲师</view>
+  </view>
+  <view class='item'>
+    <image src='http://www.chinaplat.com/imgzt/img-20171219/2017121915410780780.jpg'
+    mode='widthFix'></image>
+    <view class='name'>李晓林</view>
+    <view class='job'>人力资源管理高级讲师</view>
+  </view>
+  <view class='item'>
+    <image src='http://www.chinaplat.com/imgzt/img-20171219/2017121915410780780.jpg'
+    mode='widthFix'></image>
+    <view class='name'>金色未来</view>
+    <view class='job'>教育部认证培训机构</view>
+  </view>
+</view>
+
+<image src='/icon/gc_ic_cancel_b_pressed.png'
+mode='widthFix'
+bindtap="gohome"
+class='back'></image>

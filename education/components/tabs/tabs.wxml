@@ -1,0 +1,16 @@
+<view
+style='background-color:rgb(230,89,84);height:12%;color:white;font-size:30rpx;font-weight:800;padding:20rpx;'>{{name||'我的收藏'}}</view>
+<view style='display:flex;justify-content:space-around;'>
+  <view wx:for='{{my_title}}' wx:key='*this'
+  style='text-align:center;font-size:29rpx;padding:20rpx 10rpx;width:100%;background:#efefef;font-weight:800;color:#444;border-bottom:{{border[index]}}' data-index='{{index}}'
+bindtap="toswitch">{{item}}</view>
+</view>
+<image src='https://s2.ax1x.com/2020/02/09/1feGlT.png'
+mode='widthFix'
+style='width:65%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);'
+></image>
+<image src='/icon/gc_ic_cancel_b_pressed.png'
+bindtap="gohome"
+mode='widthFix'
+style='width:15%;position:absolute;top:85%;left:50%;transform:translate(-50%);'
+></image>

@@ -1,0 +1,134 @@
+page{
+  overflow: hidden;
+}
+.group_1>text{
+  color:#a99;
+  font-size: 27rpx;
+  font-weight: 800;
+  padding: 5rpx 15rpx;
+  border:#dc3545 1px solid;
+  position: absolute;
+  height: 40rpx;
+  border-radius: 20rpx;
+  transition: 0.3s all;
+}
+
+.group_1{
+  height:600rpx;
+  width: 100%;
+  position: relative;
+  pointer-events:auto;
+  margin-top: -50rpx;
+  top: 25%;
+}
+#g2{
+  top: -550rpx;
+}
+#g3{
+  top:-1100rpx;
+}
+/* #g2{
+  top:-550rpx;
+
+}
+#g3{
+  top:-1100rpx;
+} */
+
+.group_1>text:first-child{
+  position: absolute;
+  top:20%;
+  left: 38%;
+}
+.group_1>text:nth-child(2){
+  position: absolute;
+  top:27%;
+  left: 12%;
+}
+.group_1>text:nth-child(3){
+  position: absolute;
+  top:30%;
+  left: 62%;
+}
+.group_1>text:nth-child(4){
+  position: absolute;
+  top:45%;
+  left: 45%;
+}
+.group_1>text:nth-child(5){
+  position: absolute;
+  top:42%;
+  left: 17%;
+}
+.group_1>text:nth-child(5){
+  position: absolute;
+  top:52%;
+  left: 10%;
+}
+.group_1>text:nth-child(6){
+  position: absolute;
+  top:58%;
+  left: 36%;
+}
+.group_1>text:nth-child(7){
+  position: absolute;
+  top:65%;
+  left: 1%;
+}
+.group_1>text:nth-child(8){
+  position: absolute;
+  top:49%;
+  right: 5%;
+}
+.group_1>text:nth-child(9){
+  position: absolute;
+  top:35%;
+  left: 32%;
+}
+.group_1>text:nth-child(10){
+  position: absolute;
+  top:70%;
+  right: 17%;
+}
+.group_1>text:nth-child(11){
+  position: absolute;
+  top:77%;
+  right: 60%;
+}
+.group_1>text:nth-child(12){
+  position: absolute;
+  top:90%;
+  right: 45%;
+}
+.group_1>text:nth-child(13){
+  position: absolute;
+  top:15%;
+  right: 5%;
+}
+.title{
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: 600;
+  color:#555;
+  margin-top:120rpx; 
+}
+.switcher{
+  margin-top: 50rpx;
+  text-align: center;
+  color:#dc3545;
+  font-size: 30rpx;
+  font-weight: 600;
+  padding: 30rpx;
+}
+.sub>button{
+  color:white;
+  background: #dc3545;
+  opacity: 0.85;
+  position: absolute; 
+  top:80%;
+  left: 50%;
+  transform: translate(-50%); 
+  padding: 30rpx 5rpx;
+  z-index:101;
+}
+

@@ -1,0 +1,56 @@
+/* pages/lxg/video/video.wxss */
+
+video{
+  width:100%;
+  border-radius: 10%;
+}
+.container>image{
+  width:160rpx;
+  height:160rpx;
+  border-radius: 50%;
+  
+}
+.container{
+  display: flex;
+  margin: 20rpx 20rpx 7rpx 20rpx;
+  position: relative;
+}
+.container>.award{
+  position: absolute;
+  width:6%;
+  left:85%;
+  top:35%;
+}
+.container>view{
+  margin: 15rpx 0 0 22rpx;
+  border-bottom: 1px solid #ddd;
+  width:70%;
+}
+.container>view>view:first-child{
+  color:#333;
+  font-weight: 800;
+  font-size: 29rpx;
+}
+.container>view>view:nth-child(2){
+  color:#aaa;
+  font-size: 24rpx;
+}
+.container>view>view:nth-child(3){
+  color:#333;
+  
+  font-size: 27rpx;
+  margin:30rpx 0 16rpx 0;
+}
+textarea{
+  margin:50rpx auto;
+  background-color: rgba(0,0,0,0.05);
+  font-size: 25rpx;
+  padding: 20rpx;
+  border:1px solid #bbb;
+}
+textarea+button{
+   background-color: #dc3545;
+   color:#efefef;
+   margin-bottom: 20rpx;
+   opacity: 0.85;
+}

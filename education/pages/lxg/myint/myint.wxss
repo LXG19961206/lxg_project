@@ -1,0 +1,125 @@
+/* pages/lxg/myint/myint.wxss */
+#top{
+height:300rpx;
+background: linear-gradient(to right, #ddd6f3, #faaca8);
+}
+#top>image{
+  width:200rpx;
+  height:200rpx;
+  border-radius: 50%;
+  border:2px solid white;
+  margin-top:200rpx;  
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+}
+#top>text{
+  color:white;
+  font-weight: 800;
+  position: absolute;
+  top:60rpx;
+  font-size: 40rpx;
+  left: 50%;
+  transform: translate(-50%);
+}
+.group_1{
+  height:600rpx;
+  width: 100%;
+  position: relative;
+  pointer-events:auto;
+  margin-top: -50rpx;
+  top: 25%;
+}
+.title{
+  text-align: center;
+  font-size: 37rpx;
+  width: 75%;
+  font-weight: 600;
+  color:#dc3545;
+  margin:150rpx auto; 
+  margin-bottom: 40rpx;
+}
+.group_1>text{
+  color:white;
+  font-size: 27rpx;
+  font-weight: 800;
+  padding: 5rpx 15rpx;
+  background: #dc3545;
+  position: absolute;
+  height: 40rpx;
+  border-radius: 20rpx;
+  transition: 0.3s all;
+}
+
+.group_1>text:first-child{
+  position: absolute;
+  top:20%;
+  left: 38%;
+}
+.group_1>text:nth-child(2){
+  position: absolute;
+  top:27%;
+  left: 12%;
+}
+.group_1>text:nth-child(3){
+  position: absolute;
+  top:30%;
+  left: 62%;
+}
+.group_1>text:nth-child(4){
+  position: absolute;
+  top:45%;
+  left: 45%;
+}
+.group_1>text:nth-child(5){
+  position: absolute;
+  top:42%;
+  left: 17%;
+}
+.group_1>text:nth-child(5){
+  position: absolute;
+  top:52%;
+  left: 10%;
+}
+.group_1>text:nth-child(6){
+  position: absolute;
+  top:58%;
+  left: 36%;
+}
+.group_1>text:nth-child(7){
+  position: absolute;
+  top:65%;
+  left: 1%;
+}
+.group_1>text:nth-child(8){
+  position: absolute;
+  top:49%;
+  right: 5%;
+}
+.group_1>text:nth-child(9){
+  position: absolute;
+  top:35%;
+  left: 32%;
+}
+.group_1>text:nth-child(10){
+  position: absolute;
+  top:70%;
+  right: 17%;
+}
+button{
+  margin: auto;
+  padding:30rpx 50rpx;
+  background: #dc3545;
+  color:white;
+  font-size:30rpx;
+  opacity: 0.8;
+}
+.redesign{
+  font-size: 27rpx;
+  color:#dc3545;
+  opacity: 0.5;
+  text-align: center;
+  padding: 30rpx;
+  z-index: 100;
+}

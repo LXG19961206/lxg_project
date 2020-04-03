@@ -1,0 +1,47 @@
+/* pages/lxg/details/details.wxss */
+page{
+  padding: 15rpx 0 ;
+  background:white;
+}
+#title{
+  font-weight: 600;
+  font-size: 36rpx;
+  text-align: center;
+  margin:0;
+  padding:0;
+}
+.container{
+  display: flex;
+  
+  padding: 20rpx;
+  border-bottom:1px solid #ddd;
+  border-radius: 20%;
+}
+.img{
+  width:40%;
+  height:214rpx;
+  margin-left:20rpx; 
+  border-radius: 20%;
+}
+.text{
+  font-size:24rpx;
+  color:#666;
+  margin-left:50%; 
+}
+.title{
+  font-size:24rpx;
+  font-weight: 700;
+  margin-left:20rpx;
+}
+.text{
+  margin-left:20rpx; 
+}
+.text>view{
+  margin-top:30rpx;
+  text-align: center;
+}
+.price{
+  color:#dc3545;
+  font-size: 27rpx;
+  margin:50rpx;
+}

@@ -1,0 +1,188 @@
+<!-- 此为顶部导航栏，提供搜索等功能 -->
+<view id='topBar'>
+<image src="/images/tubiao.png"
+id='logoicon'
+mode='widthFix'></image>
+  <view id='inputandimg'>
+  </view>
+</view>
+
+<!-- 此为轮播组件 -->
+<swiper autoplay interval='2500' id='scroll'
+circular indicator-dots indicator-active-color="#fff">
+<swiper-item><image src='/images/01.jpg' ></image> </swiper-item>
+<swiper-item><image src='/images/03.jpg'
+></image> </swiper-item>
+<swiper-item><image src='/images/04.jpg'
+></image> </swiper-item>
+<swiper-item><image src='/images/05.png'
+></image> </swiper-item>
+</swiper>
+
+<!-- 下为分类内容 -->
+<view id='menu' hover-class="none" hover-stop-propagation="false">
+    <view class="menu-item"
+    bindtap='gosomewhere'
+    data-url='/pages/lxg/details/details?subject=eco'>
+      <image class="" src="/images/menu/1.png" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+      <view class="" hover-class="none" hover-stop-propagation="false">
+         约课吧
+      </view>
+    </view>
+    
+    <view class="menu-item"
+    bindtap='gosomewhere'
+    data-url='/pages/lxg/demo04/demo04?index=2'>
+      <image class="" src="/images/menu/2.png" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+      <view class="" hover-class="none" hover-stop-propagation="false">
+         家庭生活
+      </view>
+    </view>  
+
+    <view class="menu-item"
+     bindtap='gosomewhere'
+    data-url='/pages/lxg/details/details?subject=ui'>
+      <image class="" src="/images/menu/3.png" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+      <view class="" hover-class="none" hover-stop-propagation="false">
+         热门课程
+      </view>
+    </view> 
+
+     <view class="menu-item"
+    bindtap='gosomewhere'
+    data-url='/pages/lxg/demo04/demo04?index=0'>
+      <image class="" src="/images/menu/4.png" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+      <view class="" hover-class="none" hover-stop-propagation="false">
+         考试考证
+      </view>
+    </view> 
+</view>
+
+<view id="menu2" hover-class="none" hover-stop-propagation="false">  
+  <view class="menu-item"
+   bindtap='gosomewhere'
+    data-url='/pages/lxg/demo04/demo04?index=1'>
+      <image class="" src="/images/menu/8.png" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+      <view class="" hover-class="none" hover-stop-propagation="false">
+         职场对接
+      </view>
+    </view> 
+    <view class="menu-item"
+    bindtap='gosomewhere'
+    data-url='/pages/lxg/teacher/teacher'>
+      <image class="" src="/images/menu/9.png" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+      <view class="" hover-class="none" hover-stop-propagation="false">
+         寻师台
+      </view>
+    </view> 
+    <view class="menu-item"
+    bindtap="nofound">
+      <image class="" src="/images/menu/7.png" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+      <view class="" hover-class="none" hover-stop-propagation="false">
+         专题小院
+      </view>
+    </view> 
+   
+
+    <view class="menu-item" bindtap="gosomewhere"
+    data-url='/pages/lxg/personal/personal'>
+      <image class="" src="/images/menu/5.png" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+      <view class="" hover-class="none" hover-stop-propagation="false">
+         个性定制
+      </view>
+    </view> 
+</view>
+
+<image 
+class="staticimg" src="/images/06.png" lazy-load="true" binderror="" bindload="">
+</image>
+
+<view class="" hover-class="none" hover-stop-propagation="false">
+    <view class="top" hover-class="none" hover-stop-propagation="false">
+      <text class="" selectable="false" space="false" decode="false">精品课程推荐</text>
+      <navigator class="" target=""  
+      url='/pages/lxg/demo04/demo04'
+      data-url='/pages/lxg/demo04/demo04?index=1'
+bindtap="gosomewhere" hover-class="navigator-hover" open-type="navigate">更多</navigator>
+    </view>
+</view>
+<view style='height:1px;background-color:#ccc;'></view>
+<view class="floor" hover-class="none" 
+>
+    <view 
+    bindtap="gosomewhere"
+    data-url='/pages/lxg/details/details?subject=eco'>
+        <image class="" src="http://www.chinaplat.com/CourseImg/IMG-20160910/20160910094394369436.jpg" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+        <view class="" hover-class="none" hover-stop-propagation="false">经管财类课程</view>
+    </view>
+     <view bindtap="gosomewhere"
+    data-url='/pages/lxg/details/details?subject=col'>
+        <image class="" src="http://www.chinaplat.com/CourseImg/IMG-20180901/20180901145382608260.png" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+        <view class="" hover-class="none" hover-stop-propagation="false">房地产技能课程</view>
+    </view>
+     <view 
+      bindtap="gosomewhere"
+    data-url='/pages/lxg/details/details?subject=pub'>
+        <image class="" src="http://www.chinaplat.com/CourseImg/IMG-20180709/20180709175324372437.png" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+        <view class="" hover-class="none" hover-stop-propagation="false">公共考试课程</view>
+    </view>
+</view>
+
+<view class="floor" hover-class="none" hover-stop-propagation="false">
+    <view  bindtap="gosomewhere"
+    data-url='/pages/lxg/details/details?subject=med'>
+        <image class="" src="http://www.chinaplat.com/CourseImg/IMG-20190929/20190929093703141861.jpg"  lazy-load="true" binderror="" bindload=""></image>
+        <view class="" hover-class="none" hover-stop-propagation="false">医药卫类课程</view>
+    </view>
+     <view  bindtap="gosomewhere"
+    data-url='/pages/lxg/details/details?subject=lan'>
+        <image class="" src="http://www.chinaplat.com/CourseImg/IMG-20171017/20171017165443474347.jpg" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+        <view class="" hover-class="none" hover-stop-propagation="false">语言类课程</view>
+    </view>
+     <view  bindtap="gosomewhere"
+    data-url='/pages/lxg/details/details?subject=abi2'>
+        <image class="" src="https://s2.ax1x.com/2020/02/04/1B4xAI.jpg" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+        <view class="" hover-class="none" hover-stop-propagation="false">管理类联考</view>
+    </view>
+</view>
+
+
+<view class="" hover-class="none" hover-stop-propagation="false">
+    <view class="top" hover-class="none" hover-stop-propagation="false">
+      <text class="" selectable="false" space="false" decode="false">热门专题</text>
+      <navigator class="" target="" 
+      data-url='/pages/lxg/demo04/demo04?index=0'
+      bindtap="gosomewhere"
+      url="/pages/lxg/demo04/demo04?index=0" hover-class="navigator-hover" open-type="navigate">更多</navigator>
+    </view>
+</view>
+<view style='height:1px;background-color:#ccc;'></view>
+<view class="floor type2" hover-class="none" hover-stop-propagation="false">
+    <view
+     bindtap="gosomewhere"
+    data-url='/pages/lxg/details/details?subject=ui'>
+        <image class="" src="http://www.chinaplat.com/CourseImg/IMG-20180710/20180710151615321532.jpg" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+        <view class="" hover-class="none" hover-stop-propagation="false">设计专题</view>
+    </view>
+     <view
+      bindtap="gosomewhere"
+    data-url='/pages/lxg/details/details?subject=int'>
+        <image class="" src="http://www.chinaplat.com/CourseImg/IMG-20161222/20161222115446934693.jpg" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+        <view class="" hover-class="none" hover-stop-propagation="false">艺术专题</view>
+    </view>
+</view>
+
+<view class="floor type2" hover-class="none" hover-stop-propagation="false">
+    <view
+     bindtap="gosomewhere"
+    data-url='/pages/lxg/details/details?subject=abi2'>
+        <image class="" src="http://www.chinaplat.com/CourseImg/IMG-20170502/2017050216260108108.png" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+        <view class="" hover-class="none" hover-stop-propagation="false">科普专题</view>
+    </view>
+     <view
+      bindtap="gosomewhere"
+    data-url='/pages/lxg/details/details?subject=stu'>
+        <image class="" src="http://www.chinaplat.com/CourseImg/IMG-20171017/20171017165436093609.jpg" mode="widthFix" lazy-load="true" binderror="" bindload=""></image>
+        <view class="" hover-class="none" hover-stop-propagation="false">考研自考专题</view>
+    </view>
+</view>

@@ -1,0 +1,87 @@
+<view class='contianer'>
+  <image src='/images/tubiao.png' id='logo'
+  mode="widthFix"></image>
+  <view id='login_box'>
+    <text style='float:left' bindtap="to_switch"
+    class='switch_text'
+    data-switch='0'>登录</text>
+    <text style='float:right' bindtap='to_switch'
+    data-switch='1' class='switch_text'>注册</text>
+    <view id='login' style='display:{{show[0]}}'>
+      <view class='inputAndImg'>
+       <image src='/images/zhuce_shouji_icon.png'
+       mode='widthFix'></image>
+       <input placeholder="请输入您的手机"   placeholder-class="placeholder"
+       value="{{loginobj.phone}}"
+        bindinput='change'
+       data-target='loginobj.phone'></input>
+      </view>
+      <view class='inputAndImg'>
+       <image src='/images/denglu_mima_icon.png'
+       mode='widthFix'></image>
+       <input placeholder="请输入您的密码 " 
+       password
+       placeholder-class="placeholder"
+       value="{{loginobj.upwd}}"
+       bindinput='change'
+       data-target='loginobj.upwd'></input>
+      </view>
+      <navigator bindtap="joke">忘记密码？</navigator>
+      
+      <button  style='color:white;'
+      bindtap='login'>登录</button>
+      <view class='other' >——其他方式登录——</view>
+      <view class='otherlogo' bindtap="saysorry">
+        <image mode='widthFix'   src='/images/umeng_socialize_qq_on.png'></image>
+        <image mode='widthFix'   src='/images/umeng_socialize_sina_on.png'></image>
+        <image mode='widthFix'   src='/images/umeng_socialize_wechat.png'></image>
+      </view>
+    </view>
+    <view id='reg' style='display:{{show[1]}}'>
+      <view class='inputAndImg'>
+       <image src='/images/zhuce_shouji_icon.png'
+       mode='widthFix'></image>
+       <input placeholder="请输入您的手机"   placeholder-class="placeholder"
+      value="{{regobj.phone}}"
+      bindinput='change'
+      data-target='regobj.phone'></input>
+      </view>
+      <view class='inputAndImg'>
+       <image src='/images/rb_my_center_normal.png'
+       mode='widthFix'></image>
+       <input placeholder="请输入用户名 " placeholder-class="placeholder"
+        value="{{regobj.uname}}"
+      bindinput='change'
+      data-target='regobj.uname'></input></view>
+      <view class='inputAndImg'>
+       <image src='/images/denglu_mima_icon.png'
+       mode='widthFix'></image>
+       <input placeholder="请输入您的密码  "
+        password
+        placeholder-class="placeholder"
+        value="{{regobj.upwd}}"
+      bindinput='change'
+      data-target='regobj.upwd'></input>
+      </view><view class='inputAndImg'>
+       <image src='/images/denglu_mima_icon.png'
+       mode='widthFix'></image>
+       <input placeholder="请再次输入您的密码  "       
+       placeholder-class="placeholder"
+       password
+      value="{{regobj.upwd2}}"
+      bindinput='change'
+      data-target='regobj.upwd2'></input>
+      </view>
+      
+      <button  style='color:white;'
+      bindtap="reg">注册</button>
+      <view class='other'>——快捷方式登录——</view>
+      <view class='otherlogo' bindtap='saysorry'>
+        <image mode='widthFix'   src='/images/umeng_socialize_qq_on.png'></image>
+        <image mode='widthFix'   src='/images/umeng_socialize_sina_on.png'></image>
+        <image mode='widthFix'   src='/images/umeng_socialize_wechat.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
+

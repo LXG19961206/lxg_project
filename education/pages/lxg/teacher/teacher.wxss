@@ -1,0 +1,55 @@
+/* pages/lxg/teacher/teacher.wxss */
+page{
+  padding: 20rpx;
+  background: rgba(200,200,200,0.1)
+}
+.logo{
+  width: 50%;
+  margin:30rpx auto;
+}
+.item{
+  width: 240rpx;
+  height:320rpx;
+  background: #fff;
+  text-align: center;
+  margin:0 30rpx 30rpx 0;
+  background-image:url(https://static.easyicon.net/preview/53/530010.gif);
+  background-size: 38rpx;
+  background-position:100% 0%;
+  background-repeat:no-repeat; 
+}
+.item>image{
+  width: 160rpx;
+  height:160rpx;
+  border-radius: 50%;
+  margin: 20rpx 40rpx;
+}
+.name{
+  font-size: 29rpx;
+  font-weight: 800;
+  color:#333;
+  margin-bottom: 20rpx;
+}
+.job{
+  font-size: 27rpx;
+  color:#aaa;
+}
+.title{
+  font-weight: 600;
+  font-size: 30rpx;
+  color:#222;
+  margin: 20rpx 0;
+}
+.group{
+  display: flex;
+   overflow-x:auto; 
+}
+.back{
+  width: 14%;
+  position:fixed;
+  top:85%;
+  left: 50%;
+  opacity: 0.5;
+  z-index: 20;
+  transform: translate(-50%);
+}

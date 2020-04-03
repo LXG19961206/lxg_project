@@ -1,0 +1,81 @@
+/* pages/lxg/demo01/demo01.wxss */
+/* rpx单位, */
+body{
+  background-color: #efefef;
+}
+#logoicon{
+  width:80rpx;
+}
+#topBar{
+  position: relative;
+}
+#topBar>view>input{
+  position: absolute;
+  left:15%;
+  top:0;
+  margin-top: 15rpx;
+}
+#scroll image{
+  width:100%;
+  margin-top: 5rpx;
+  height: 300rpx;
+}
+.staticimg{
+  width: 100%;
+  height:150rpx;
+  margin-top: 5rpx;
+}
+#menu,#menu2{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rpx;
+  font-size: 24rpx;
+  text-align: center;
+  font-weight: 800;
+  color:#666;
+}
+
+.menu-item image{
+  width:120rpx;
+  height:120rpx;
+  
+}
+.top{
+  display: flex;
+  padding: 10rpx;
+}
+.top text{
+  font-weight: 800;
+  margin-left: 10rpx;
+  font-size: 30rpx;
+ 
+}
+.top navigator{
+  position: absolute;
+  right:10rpx;
+  color:#aaa;
+  font-size: 30rpx;
+}
+.floor{
+  text-align: center;
+  font-size: 25rpx;
+  color:#666;
+  font-weight: 800;  
+  overflow-x: auto;
+  display: flex;
+}
+.floor>view{ 
+  text-align: center;
+  margin: 15rpx;
+}
+.floor view image{
+  width:300rpx;
+  border-radius: 30rpx;
+  height:225rpx;
+}
+.type2 view image{
+  border-radius:15rpx 30rpx 15rpx 30rpx;
+  width:350rpx;  
+}
+
+

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fili</title>
+	<style>
+		.color a 
+		{
+		display: inline-block;
+		border:1px #aaa solid;
+		text-decoration: none;
+		color:black;
+		width: 80px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		margin-left: 5%;
+		margin-top: 5%;
+		cursor:pointer
+		}
+
+		.color a:hover
+		{
+		border:1px black solid;
+		}
+
+		button
+		{
+		width: 120px;
+		height: 40px;
+		background-color: #222;
+		color:white;
+		text-align: center;
+		line-height: 40px;
+		font-size: 17px;
+		position: absolute;
+		left: 50%;
+		transform:translate(-50%,50%);
+
+		}
+		.box
+		{position: absolute;
+		top: 10%;
+		left: 50%;
+		transform:translate(-50%);}
+		h1
+		{
+		font-weight: 400;
+		}
+    .p1
+		{color:#bbb;
+		font-size: 15px;}
+		.p2
+		{float: right;
+		margin-top: -20px;
+		font-weight: 600;}
+		hr
+		{clear:both;}
+		.number
+		{margin-top: 5%;}
+		.number input
+		{margin-left: 5%;
+		height: 25px;
+		width: 60px;
+		border:1px solid black;}
+	</style>
+</head>
+<body>
+<div class="box">
+	<h1>FILI  Diva &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h1>
+	
+	<p class='p2'>¥999元</p>
+	<hr>
+	<div class='color'>
+		<span>颜色</span>
+		<a id='s1' class="select1" onclick='gn()'>曜石黑</a>
+		<a id='s2' class="select2" onclick='hn()'>皓月白</a>
+		<a id='s3' class="select3" onclick='jn()'>影魔红</a>
+	</div>
+	<div class='number'>
+		<span>数量</span>
+		<input id='num' type="number">
+	</div>
+	<button onclick='fn()'>立即购买</button>
+	<script>
+		var obj='';
+		
+    onload=function()
+		{
+		 s1.style='border:1px solid black';
+		 obj='曜石黑'
+		}
+		function gn()
+		{
+			 obj='曜石黑'
+      s1.style='border:1px solid black';
+		  s2.style='border:1px #aaa solid';
+			s3.style='border:1px #aaa solid';
+		}
+			function hn()
+		{
+			 obj='皓月白'
+      s2.style='border:1px solid black';
+		  s1.style='border:1px #aaa solid';
+			s3.style='border:1px #aaa solid';
+		}
+			function jn()
+		{
+			 obj='影魔红'
+      s3.style='border:1px solid black';
+		  s1.style='border:1px #aaa solid';
+			s2.style='border:1px #aaa solid';
+		}
+		function fn()
+		{	if(num.value>0&&obj)
+			alert(`您选择的是FILI Diva耳机, 颜色:${obj}, 数量:${num.value}个, 感谢您的购买`)
+		}
+	</script>
+</div>
+</body>
+</html>

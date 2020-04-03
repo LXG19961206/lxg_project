@@ -1,0 +1,29 @@
+<view
+style='background-color:rgb(230,89,84);height:12%;color:white;font-size:30rpx;font-weight:800;padding:20rpx;'>帮助和反馈</view>
+<view id='msg'>
+  <view class='title'
+  bindtap='details'
+  data-msg='0'>
+    <image src='/icon/1175799.png' mode='widthFix'></image>
+    <text class='details'>学习课程相关</text>
+  </view>
+  <view class='title'
+  bindtap='details'
+  data-msg='1'>
+    <image src='/icon/1175799.png' mode='widthFix'></image>
+    <text class='details'>学币积分相关</text>
+  </view>
+</view>
+ <textarea class='textarea' decode='true'
+  disabled style='display:{{show}}'
+ >
+  <view wx:for='{{message}}' wx:key='*this'>
+    <view>{{item.title}}</view>
+    <view>{{item.content}}</view>
+    <view style='margin-bottom:30rpx;'></view>
+  </view>
+ </textarea>
+<image src='/icon/gc_ic_cancel_b_pressed.png'
+mode='widthFix'
+bindtap="gohome"
+class='back'></image>

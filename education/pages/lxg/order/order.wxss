@@ -1,0 +1,40 @@
+/* pages/lxg/order/order.wxss */
+.titlebox,.contentbox{
+  display: flex;
+  padding: 30rpx;
+  justify-content: space-around;
+}
+.titlebox>text,.contentbox>text{
+  
+  color:#666;
+  font-size: 27rpx;
+}
+.titlebox>input{
+  
+  width: 65%;
+  border-bottom:1px solid rgba(0,0,0,0.05);
+}
+.contentbox>textarea{
+  width: 65%;
+  background-color: rgba(0,0,0,0.025);
+  font-size: 25rpx;
+  overflow: hidden;
+  max-height:500rpx;
+  padding: 20rpx;
+  border:1px solid #bbb;
+}
+.readme{
+  padding: 35rpx;
+  color:#666;
+  font-size: 27rpx;
+}
+.back{
+  width: 14%;
+  position:fixed;
+  top:85%;
+  left: 50%;
+  opacity: 0.5;
+  z-index: 20;
+  transform: translate(-50%);
+}
+

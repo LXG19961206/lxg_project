@@ -1,0 +1,3 @@
+<tabs my_title='{{title}}' 
+my_border='{{border}}'
+name='我的笔记'></tabs>

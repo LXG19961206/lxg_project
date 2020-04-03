@@ -1,0 +1,55 @@
+/* pages/lxg/help/help.wxss */.top{
+  background: linear-gradient(to right, #ddd6f3, #faaca8);
+  padding: 20rpx;
+  color:white;
+  font-size: 27rpx;
+  font-weight: 700;
+}
+.title{
+  position: relative;
+  height:38rpx;
+  border-bottom:1px solid #ccc;
+  padding: 20rpx; 
+}
+.title>image{
+  width: 38rpx;
+  height:38rpx;
+}
+.title>.details{
+  font-size: 27rpx;
+  position: absolute;
+  color:#333;
+  line-height: 38rpx;
+  margin-left: 20rpx;
+  top:50%;
+  transform: translateY(-50%);
+}
+.title>.time{
+  position: absolute;
+  right: 5%;
+  font-size: 27rpx;
+  color:#666;
+  top:50%;
+  transform: translateY(-50%);
+}
+.textarea{
+  width: 80%;
+  margin:35rpx auto;
+  background-color: rgba(0,0,0,0.05);
+  font-size: 25rpx;
+  overflow: hidden;
+
+  height:auto;
+  padding: 20rpx;
+  border:1px solid #bbb;
+  display: none;
+}
+.back{
+  width: 14%;
+  position: fixed;
+  top:85%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 20;
+  opacity: 0.5;
+}

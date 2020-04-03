@@ -1,0 +1,43 @@
+<view id='top'>
+  <image class='header'
+  src="{{header}}"></image>
+  <text class='uname'>{{uname}}</text>
+  <view class='tab'>
+    <text>学习记录</text>
+    <text>购买课程</text>
+    <text>离线缓存</text>
+  </view>
+</view>
+<view class='tabBar'>
+  <view>视频</view>
+  <view>读书</view>
+  <view>文章</view>
+</view>
+<view id='videoitem' class='tabitem'></view>
+<view wx:for="{{msg}}">
+    <view wx:for='{{item}}' wx:key='*this' class='container'
+bindtap='govideo'
+data-title='{{item.title}}'
+data-src='{{item.video}}'>
+  <image 
+  lazy-load="true"
+  class='img' src='{{item.src}}'></image>
+  <view class='text'>
+  <view class='title'>{{item.title}}</view>
+  <text>{{swap}}</text>
+  <text class='price'>￥{{item.price}} </text>
+  <text class='time'>{{item.time}}课时</text>
+  <text>{{swap}}</text>
+  <view class='teacher'>推荐人:{{item.teacher}}老师</view>
+  </view>
+</view>
+</view>
+<view id='readingitem' class='tabitem'>
+  <image  src='https://s2.ax1x.com/2020/02/07/12ai4S.jpg'
+style='display:none'>
+  </image>
+</view>
+<view id='textitem' class='tabitem' style='display:none'>
+  <image  src='https://s2.ax1x.com/2020/02/07/12ai4S.jpg'>
+  </image>
+</view>
