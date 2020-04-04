@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				padding: 50px;
+			}
+			.flex{
+				display: flex;
+				
+			}
+			.col-2{
+				width:calc(100%/6);
+			}
+			.col-3{
+				width:calc(100%/4);
+			}
+			.col-4{
+				width:calc(100%/3);
+			}
+			.col-5{
+				width:calc(100%/(12/5));
+			}
+			.col-6{
+				width:calc(100%/2);
+			}
+			.col-8{
+				width:clac(100%/3*2)
+			}
+			.w-100{
+				width:100%;
+			}
+			.swiper{
+				width: 80%;
+			}
+			.swiper > *{
+				margin-right: 10px;
+			}
+			.small{
+				position: relative;
+			}
+			.small,.small>img{
+				width:300px;
+				width:300px;
+			}
+			.big{
+				height:450px;
+				width:450px;
+				background-image: url(1544861267.jpg);
+				background-size:900px 900px ;
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				
+				border:1px solid black;
+				display: none;
+			}
+			
+			.moveBox{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 150px;
+				height: 150px;
+				opacity: 0.5;
+				background: lightpink;
+				display: none;
+			}
+			.list  img {
+				margin: 0 5px;
+			}
+			.list>div img:first-child {
+				border:1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class='flex' >
+			<div class="left  col-4">
+				<div class="small">
+					<img src="1544861267.jpg" alt="">
+					<div class="moveBox"></div>
+				</div>
+				<div class='flex w-25 list' style='height:70px;width:300px;'>
+					<button onclick='switchImg(-1)'>&lt;</button>
+					<div>
+						<img src="1546933021.jpg" alt="" class='col-3' onclick='switchImg(null,event)'>
+						<img src="1552648977.jpg" alt="" class='col-3' onclick='switchImg(null,event)'>
+						<img src="1544861267.jpg" alt="" class='col-3' onclick='switchImg(null,event)'>
+					</div>
+					<button onclick='switchImg(1)'>&gt;</button>
+				</div>
+			</div>
+			<div class="big">
+				<div></div>
+			</div>
+		</div>
+		
+		<script>
+			let $=((selector)=>{selector=Array.from(document.querySelectorAll(selector));
+			return selector.length==1?selector[0]:selector
+			}).bind(document)
+			let small=$('.small'),big=$('.big'),box=$('.moveBox')
+			
+			small.onmousemove=function(e){
+				box.style.display=big.style.display='block'
+				let x=e.clientX-small.offsetLeft
+				let y=e.clientY-small.offsetTop
+				console.log(x,y)
+				if(x<75)x=75;
+				else if(x>225)x=225;
+				if(y<75)y=75;
+				else if(y>225)y=225;
+				box.style.left=`${x-75}px`
+				box.style.top=`${y-75}px`
+				$('.big').style.backgroundPosition=`${-3*(x-75)}px ${-3*(y-75)}px`
+			}
+			small.onmouseleave=()=>{
+				box.style.display=big.style.display='none'
+			}
+			let imgs=$('.list  img')
+			imgs.forEach((item,i)=>item.setAttribute('data-index',i))
+			let switchImg=(direction,event)=>{	
+				if(!direction){
+					let src=event.target.src
+					while(true){
+						switchImg(1)
+						if(imgs[0].src==src)break
+					}
+					return
+				}
+				direction==1?(()=>{
+					let temp=imgs[0].src
+					for(let i=0;i<=imgs.length-1;i++){
+						let item=imgs[i]
+						i==imgs.length-1?item.src=temp:item.src=imgs[i+1].src
+					}
+					
+				})():(()=>{
+					let temp=imgs[imgs.length-1].src
+					for(let i=imgs.length-1;i>=0;i--){
+						let item=imgs[i]
+						i==0?item.src=temp:item.src=imgs[i-1].src
+					}
+				})()
+			$('.small img').src=imgs[0].src.split('.jpg')[0]+'md.jpg'
+			$('.big').style.backgroundImage=`url(${imgs[0].src.split('.jpg')[0]}lg.jpg)`
+			}
+		</script>
+	</body>
+</html>
